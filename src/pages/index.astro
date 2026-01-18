@@ -1,11 +1,170 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from '../components/Layout.astro';
+import Hero from '../components/Hero.astro';
+import GuideCard from '../components/GuideCard.astro';
+import MapCard from '../components/MapCard.astro';
+import BuildCard from '../components/BuildCard.astro';
+import { BookOpen, Gift, Trophy, Calendar, Calculator } from 'lucide-astro';
+import mapsData from '../data/maps.json';
+import buildsData from '../data/builds.json';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const featuredMaps = mapsData.maps.slice(0, 3);
+const featuredBuilds = buildsData.builds.filter(b => b.tier === 'S' || b.tier === 'A').slice(0, 3);
 ---
 
 <Layout>
-	<Welcome />
+  <Hero />
+  
+  <!-- Quick Links Section -->
+  <section class="container mx-auto px-4 py-16">
+    <h2 class="text-4xl font-bold text-center mb-12">
+      Quick <span class="text-primary">Navigation</span>
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <GuideCard
+        title="Beginner's Guide"
+        description="Start your journey with basic controls, mechanics, and first steps in Streetdog BMX."
+        href="/guides/beginner-guide/"
+        difficulty="Beginner"
+        icon={BookOpen}
+      />
+      
+      <GuideCard
+        title="Tricks & Combos"
+        description="Master air tricks, grinds, and manuals. Learn to chain them into high-scoring combos."
+        href="/guides/tricks-combos/"
+        difficulty="Intermediate"
+        icon={BookOpen}
+      />
+      
+      <GuideCard
+        title="Tier List"
+        description="Discover the best builds, tricks, and strategies ranked by effectiveness."
+        href="/tier-list/"
+        icon={Trophy}
+      />
+      
+      <GuideCard
+        title="Promo Codes"
+        description="Find active promotional codes for unlockables and special content."
+        href="/codes/"
+        icon={Gift}
+      />
+    </div>
+  </section>
+  
+  <!-- Featured Maps Section -->
+  <section class="container mx-auto px-4 py-16 bg-base-200/50">
+    <div class="flex items-center justify-between mb-12">
+      <div>
+        <h2 class="text-4xl font-bold mb-2">
+          Featured <span class="text-primary">Maps</span>
+        </h2>
+        <p class="opacity-70">Explore 6 handcrafted environments</p>
+      </div>
+      <a href="/maps/" class="btn btn-primary">View All Maps</a>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {featuredMaps.map((map) => (
+        <MapCard map={map} />
+      ))}
+    </div>
+  </section>
+  
+  <!-- Featured Builds Section -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="flex items-center justify-between mb-12">
+      <div>
+        <h2 class="text-4xl font-bold mb-2">
+          Top <span class="text-primary">Builds</span>
+        </h2>
+        <p class="opacity-70">Best bike configurations for every playstyle</p>
+      </div>
+      <a href="/builds/" class="btn btn-primary">View All Builds</a>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {featuredBuilds.map((build) => (
+        <BuildCard build={build} />
+      ))}
+    </div>
+  </section>
+  
+  <!-- Tools Section -->
+  <section class="container mx-auto px-4 py-16 bg-base-200/50">
+    <h2 class="text-4xl font-bold text-center mb-12">
+      Helpful <span class="text-primary">Tools</span>
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <a href="/tools/score-calculator/" class="card bg-base-200 hover:bg-base-300 shadow-xl card-hover">
+        <div class="card-body items-center text-center">
+          <Calculator class="h-12 w-12 text-primary mb-4" />
+          <h3 class="card-title">Score Calculator</h3>
+          <p class="text-sm opacity-80">Calculate potential combo scores</p>
+        </div>
+      </a>
+      
+      <a href="/tier-list/" class="card bg-base-200 hover:bg-base-300 shadow-xl card-hover">
+        <div class="card-body items-center text-center">
+          <Trophy class="h-12 w-12 text-secondary mb-4" />
+          <h3 class="card-title">Tier Lists</h3>
+          <p class="text-sm opacity-80">Best builds, tricks & maps ranked</p>
+        </div>
+      </a>
+      
+      <a href="/release/" class="card bg-base-200 hover:bg-base-300 shadow-xl card-hover">
+        <div class="card-body items-center text-center">
+          <Calendar class="h-12 w-12 text-accent mb-4" />
+          <h3 class="card-title">Release Info</h3>
+          <p class="text-sm opacity-80">Platforms & system requirements</p>
+        </div>
+      </a>
+    </div>
+  </section>
+  
+  <!-- Latest Updates Section -->
+  <section class="container mx-auto px-4 py-16">
+    <h2 class="text-4xl font-bold text-center mb-12">
+      Latest <span class="text-primary">Updates</span>
+    </h2>
+    
+    <div class="max-w-3xl mx-auto space-y-6">
+      <div class="alert alert-success">
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <div>
+          <h3 class="font-bold">Game Released!</h3>
+          <div class="text-sm">Streetdog BMX is now available on PC, PS4, and Xbox One - January 14, 2026</div>
+        </div>
+      </div>
+      
+      <div class="alert alert-info">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <div>
+          <h3 class="font-bold">Wiki Launch</h3>
+          <div class="text-sm">Comprehensive guides now available - Start exploring!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="container mx-auto px-4 py-16 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-3xl">
+    <div class="text-center max-w-2xl mx-auto">
+      <h2 class="text-4xl font-bold mb-6">Ready to Master the Streets?</h2>
+      <p class="text-lg opacity-80 mb-8">
+        Start with our comprehensive beginner's guide and learn everything you need to dominate in Streetdog BMX.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/guides/beginner-guide/" class="btn btn-primary btn-lg">Start Learning</a>
+        <a href="/official/" class="btn btn-outline btn-lg">Get the Game</a>
+      </div>
+    </div>
+  </section>
 </Layout>

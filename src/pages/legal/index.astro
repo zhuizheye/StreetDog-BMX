@@ -1,0 +1,139 @@
+---
+import Layout from '../../components/Layout.astro';
+import { Shield, FileText, AlertTriangle, ExternalLink } from 'lucide-astro';
+---
+
+<Layout 
+  title="Legal Information"
+  description="Legal information, privacy policy, terms of service, and disclaimers for Streetdog BMX Wiki."
+  keywords={['legal', 'privacy', 'terms', 'disclaimer']}
+>
+  <div class="container mx-auto px-4 py-16">
+    <div class="breadcrumbs text-sm mb-4">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li>Legal</li>
+      </ul>
+    </div>
+    
+    <h1 class="text-5xl font-bold mb-4">
+      Legal <span class="text-primary">Information</span>
+    </h1>
+    <p class="text-xl opacity-80 mb-12">
+      Important legal documents and policies for Streetdog BMX Wiki
+    </p>
+    
+    <!-- Legal Documents -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+      <a href="/legal/privacy/" class="card bg-base-200 hover:bg-base-300 card-hover">
+        <div class="card-body">
+          <Shield class="h-12 w-12 text-primary mb-4" />
+          <h2 class="card-title">Privacy Policy</h2>
+          <p class="text-sm opacity-80">Learn how we collect, use, and protect your information.</p>
+          <div class="card-actions justify-end mt-4">
+            <ExternalLink class="h-4 w-4 opacity-50" />
+          </div>
+        </div>
+      </a>
+      
+      <a href="/legal/terms/" class="card bg-base-200 hover:bg-base-300 card-hover">
+        <div class="card-body">
+          <FileText class="h-12 w-12 text-secondary mb-4" />
+          <h2 class="card-title">Terms of Service</h2>
+          <p class="text-sm opacity-80">Rules and guidelines for using this website.</p>
+          <div class="card-actions justify-end mt-4">
+            <ExternalLink class="h-4 w-4 opacity-50" />
+          </div>
+        </div>
+      </a>
+      
+      <a href="/legal/disclaimer/" class="card bg-base-200 hover:bg-base-300 card-hover">
+        <div class="card-body">
+          <AlertTriangle class="h-12 w-12 text-warning mb-4" />
+          <h2 class="card-title">Disclaimer</h2>
+          <p class="text-sm opacity-80">Important legal notices about this unofficial fan website.</p>
+          <div class="card-actions justify-end mt-4">
+            <ExternalLink class="h-4 w-4 opacity-50" />
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    <!-- Quick Summary -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Quick Summary</h2>
+      
+      <div class="space-y-6">
+        <div class="alert alert-info">
+          <AlertTriangle class="h-6 w-6" />
+          <div>
+            <h3 class="font-bold">Unofficial Fan Website</h3>
+            <div class="text-sm">This is an unofficial, fan-made resource. We are not affiliated with or endorsed by the official Streetdog BMX developers or publishers.</div>
+          </div>
+        </div>
+        
+        <div class="bg-base-200 rounded-2xl p-6">
+          <h3 class="font-bold text-lg mb-4">Key Points</h3>
+          <ul class="space-y-3">
+            <li class="flex gap-3">
+              <Shield class="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+              <span><strong>Privacy:</strong> We collect minimal data and use analytics to improve the website. See our <a href="/legal/privacy/" class="link link-primary">Privacy Policy</a> for details.</span>
+            </li>
+            <li class="flex gap-3">
+              <FileText class="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
+              <span><strong>Use:</strong> Content is for personal, non-commercial use. Do not republish or sell our content without permission. See <a href="/legal/terms/" class="link link-primary">Terms of Service</a>.</span>
+            </li>
+            <li class="flex gap-3">
+              <AlertTriangle class="h-5 w-5 text-warning flex-shrink-0 mt-0.5" />
+              <span><strong>Accuracy:</strong> While we strive for accuracy, information may become outdated. See our <a href="/legal/disclaimer/" class="link link-primary">Disclaimer</a>.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Copyright -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Copyright & Attribution</h2>
+      
+      <div class="bg-base-200 rounded-2xl p-8">
+        <h3 class="font-bold text-xl mb-4">Game Rights</h3>
+        <p class="mb-6">
+          Streetdog BMX, its name, logo, and all related content are the property of their respective owners. 
+          This website operates under fair use principles for educational, informational, and community purposes.
+        </p>
+        
+        <h3 class="font-bold text-xl mb-4">Our Content</h3>
+        <p class="mb-6">
+          Original content created by Streetdog BMX Wiki (guides, articles, designs) is © 2026 Streetdog BMX Wiki. 
+          You may share and link to our content, but please provide proper attribution.
+        </p>
+        
+        <h3 class="font-bold text-xl mb-4">Reporting Copyright Issues</h3>
+        <p>
+          If you believe any content infringes your copyright, please contact us at:
+        </p>
+        <p class="mt-2">
+          <a href="mailto:legal@streetdogbmxwiki.com" class="link link-primary">legal@streetdogbmxwiki.com</a>
+        </p>
+      </div>
+    </section>
+    
+    <!-- Contact -->
+    <section>
+      <h2 class="text-3xl font-bold mb-8">Questions?</h2>
+      
+      <div class="card bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20">
+        <div class="card-body text-center">
+          <p class="mb-6">
+            If you have questions about our legal policies or need clarification on any terms, please don't hesitate to contact us.
+          </p>
+          <div>
+            <a href="mailto:legal@streetdogbmxwiki.com" class="btn btn-primary">Contact Legal Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+

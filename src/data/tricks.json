@@ -1,0 +1,262 @@
+{
+  "airTricks": [
+    {
+      "id": "360-spin",
+      "name": "360 Spin",
+      "category": "Air",
+      "difficulty": "Beginner",
+      "basePoints": 250,
+      "description": "Complete 360-degree rotation in the air",
+      "input": "Right stick rotate",
+      "tips": "Start with small airs to get timing right"
+    },
+    {
+      "id": "backflip",
+      "name": "Backflip",
+      "category": "Air",
+      "difficulty": "Intermediate",
+      "basePoints": 800,
+      "description": "Backward rotation flip",
+      "input": "Right stick down",
+      "tips": "Need good height and commit to the rotation"
+    },
+    {
+      "id": "frontflip",
+      "name": "Frontflip",
+      "category": "Air",
+      "difficulty": "Intermediate",
+      "basePoints": 850,
+      "description": "Forward rotation flip",
+      "input": "Right stick up",
+      "tips": "Less common than backflip but same difficulty"
+    },
+    {
+      "id": "tailwhip",
+      "name": "Tailwhip",
+      "category": "Air",
+      "difficulty": "Intermediate",
+      "basePoints": 600,
+      "description": "Rotate bike frame 360 degrees while holding bars",
+      "input": "Right stick diagonal",
+      "tips": "Timing is crucial for landing"
+    },
+    {
+      "id": "barspin",
+      "name": "Barspin",
+      "category": "Air",
+      "difficulty": "Intermediate",
+      "basePoints": 500,
+      "description": "Spin handlebars 360 degrees",
+      "input": "Right stick left/right combinations",
+      "tips": "Easier to combo with other tricks"
+    },
+    {
+      "id": "no-hander",
+      "name": "No-Hander",
+      "category": "Air",
+      "difficulty": "Beginner",
+      "basePoints": 300,
+      "description": "Release handlebars mid-air",
+      "input": "Hold specific stick position",
+      "tips": "Great for style points"
+    },
+    {
+      "id": "superman",
+      "name": "Superman",
+      "category": "Air",
+      "difficulty": "Advanced",
+      "basePoints": 1200,
+      "description": "Extend body off back of bike",
+      "input": "Extended air trick input",
+      "tips": "Requires good air time"
+    },
+    {
+      "id": "double-backflip",
+      "name": "Double Backflip",
+      "category": "Air",
+      "difficulty": "Advanced",
+      "basePoints": 2000,
+      "description": "Two consecutive backflips",
+      "input": "Right stick down (hold longer)",
+      "tips": "Need maximum height from launch"
+    },
+    {
+      "id": "720-spin",
+      "name": "720 Spin",
+      "category": "Air",
+      "difficulty": "Advanced",
+      "basePoints": 1500,
+      "description": "Two full rotations (720 degrees)",
+      "input": "Right stick rotate (extended)",
+      "tips": "Rotate fast and spot landing"
+    },
+    {
+      "id": "flair",
+      "name": "Flair",
+      "category": "Air",
+      "difficulty": "Expert",
+      "basePoints": 2500,
+      "description": "Backflip combined with 180 spin",
+      "input": "Combination input",
+      "tips": "Quarter pipe essential, very technical"
+    },
+    {
+      "id": "barspin-tailwhip",
+      "name": "Barspin + Tailwhip",
+      "category": "Air",
+      "difficulty": "Expert",
+      "basePoints": 2200,
+      "description": "Combine barspin and tailwhip in one air",
+      "input": "Complex stick movements",
+      "tips": "Master each individually first"
+    }
+  ],
+  "grindTricks": [
+    {
+      "id": "feeble-grind",
+      "name": "Feeble Grind",
+      "category": "Grind",
+      "difficulty": "Intermediate",
+      "basePoints": 400,
+      "description": "Front peg and back tire on rail",
+      "input": "Approach rail at angle, right stick position",
+      "tips": "Balanced grind, good for beginners",
+      "pointsPerSecond": 100
+    },
+    {
+      "id": "smith-grind",
+      "name": "Smith Grind",
+      "category": "Grind",
+      "difficulty": "Intermediate",
+      "basePoints": 450,
+      "description": "Back peg and front tire on rail",
+      "input": "Specific rail position",
+      "tips": "Opposite of feeble, slightly harder",
+      "pointsPerSecond": 110
+    },
+    {
+      "id": "icepick-grind",
+      "name": "Icepick Grind",
+      "category": "Grind",
+      "difficulty": "Advanced",
+      "basePoints": 700,
+      "description": "Single back peg balance",
+      "input": "Technical balance required",
+      "tips": "Requires precise balance control",
+      "pointsPerSecond": 150
+    },
+    {
+      "id": "double-peg",
+      "name": "Double Peg Grind",
+      "category": "Grind",
+      "difficulty": "Beginner",
+      "basePoints": 300,
+      "description": "Both pegs on rail (most stable)",
+      "input": "Standard rail approach",
+      "tips": "Easiest grind to learn",
+      "pointsPerSecond": 80
+    },
+    {
+      "id": "toothpick",
+      "name": "Toothpick Grind",
+      "category": "Grind",
+      "difficulty": "Advanced",
+      "basePoints": 800,
+      "description": "Technical rail balance trick",
+      "input": "Advanced rail positioning",
+      "tips": "Very technical, practice required",
+      "pointsPerSecond": 160
+    },
+    {
+      "id": "crankslide",
+      "name": "Crankslide",
+      "category": "Grind",
+      "difficulty": "Expert",
+      "basePoints": 900,
+      "description": "Grind on crank arm",
+      "input": "Special angle approach",
+      "tips": "Angle is everything",
+      "pointsPerSecond": 180
+    },
+    {
+      "id": "flareway-bar",
+      "name": "Flareway Bar",
+      "category": "Grind",
+      "difficulty": "Expert",
+      "basePoints": 1000,
+      "description": "Technical lip trick on coping",
+      "input": "Specific lip approach",
+      "tips": "Requires ramp/bowl setup",
+      "pointsPerSecond": 200
+    },
+    {
+      "id": "crooked-grind",
+      "name": "Crooked Grind",
+      "category": "Grind",
+      "difficulty": "Advanced",
+      "basePoints": 750,
+      "description": "Angled approach grind",
+      "input": "Angled rail approach",
+      "tips": "Speed and angle critical",
+      "pointsPerSecond": 140
+    },
+    {
+      "id": "pedal-grind",
+      "name": "Pedal Grind",
+      "category": "Grind",
+      "difficulty": "Expert",
+      "basePoints": 950,
+      "description": "Grind on pedal instead of peg",
+      "input": "Precision grind positioning",
+      "tips": "Very precise, high risk",
+      "pointsPerSecond": 190
+    }
+  ],
+  "manualTricks": [
+    {
+      "id": "manual",
+      "name": "Manual",
+      "category": "Ground",
+      "difficulty": "Beginner",
+      "basePoints": 50,
+      "description": "Back wheel balance (wheelie)",
+      "input": "B/Circle button",
+      "pointsPerSecond": 50,
+      "tips": "Essential for combo linking"
+    },
+    {
+      "id": "nose-manual",
+      "name": "Nose Manual",
+      "category": "Ground",
+      "difficulty": "Intermediate",
+      "basePoints": 80,
+      "description": "Front wheel balance (endo)",
+      "input": "Modified stick position",
+      "pointsPerSecond": 80,
+      "tips": "Harder to balance than regular manual"
+    }
+  ],
+  "specialTricks": [
+    {
+      "id": "wallride",
+      "name": "Wallride",
+      "category": "Special",
+      "difficulty": "Intermediate",
+      "basePoints": 600,
+      "description": "Ride on vertical wall surface",
+      "input": "Approach wall with speed",
+      "tips": "Speed and angle essential"
+    },
+    {
+      "id": "transfer",
+      "name": "Transfer",
+      "category": "Special",
+      "difficulty": "Intermediate",
+      "basePoints": 500,
+      "description": "Move between different ramps/sections",
+      "input": "Jump between transitions",
+      "tips": "Great for combo extension"
+    }
+  ]
+}
+

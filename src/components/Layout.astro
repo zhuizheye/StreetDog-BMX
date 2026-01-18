@@ -1,0 +1,55 @@
+---
+import Header from './Header.astro';
+import Footer from './Footer.astro';
+import SEO from './SEO.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+}
+
+const { title, description, keywords } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <SEO title={title} description={description} keywords={keywords} />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8D2MYYRJB"></script>
+  <script is:inline>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z8D2MYYRJB');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <style is:inline>
+    /* Critical CSS for faster initial render */
+    html { scroll-behavior: smooth; }
+    body { 
+      background-color: #1a1a1a; 
+      color: #fff; 
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: rgba(45, 45, 45, 0.95);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-base-100 flex flex-col">
+  <Header />
+  <main class="flex-grow">
+    <slot />
+  </main>
+  <Footer />
+</body>
+</html>
+

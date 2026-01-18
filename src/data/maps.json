@@ -1,0 +1,227 @@
+{
+  "maps": [
+    {
+      "id": "skate-park",
+      "name": "The Skate Park",
+      "difficulty": "Beginner",
+      "size": "Medium",
+      "focus": "Flow and fundamentals",
+      "description": "Safe environment perfect for mastering the basics. Features multiple bowls, quarter pipes, and rail arrays designed for learning core mechanics.",
+      "features": [
+        "Multiple bowl sections",
+        "Quarter pipe arrays",
+        "Beginner-friendly rail setups",
+        "Flat practice areas",
+        "Controlled environment"
+      ],
+      "hiddenSpots": 6,
+      "challengeCount": 35,
+      "bestFor": [
+        "Learning basic mechanics",
+        "Practicing tricks safely",
+        "Building first combos",
+        "Tutorial completion",
+        "Warm-up sessions"
+      ],
+      "tips": [
+        "Start here to learn game mechanics",
+        "Practice pump system in bowls",
+        "Master basic grinds on rails",
+        "Learn manual transitions"
+      ],
+      "keyLocations": [
+        "Main Bowl - Center piece for flow practice",
+        "Rail Garden - Multiple rail configurations",
+        "Quarter Pipe Section - Air trick practice",
+        "Flat Area - Manual and ground trick practice"
+      ]
+    },
+    {
+      "id": "urban-streets",
+      "name": "Urban Streets",
+      "difficulty": "Intermediate",
+      "size": "Large",
+      "focus": "Street riding and technical tricks",
+      "description": "Authentic street BMX environment with stairs, ledges, and urban architecture. Captures the essence of real street riding.",
+      "features": [
+        "Multiple stair sets with rails",
+        "Street ledges and curbs",
+        "Urban gaps and drops",
+        "Wallride opportunities",
+        "Realistic street obstacles"
+      ],
+      "hiddenSpots": 12,
+      "challengeCount": 45,
+      "bestFor": [
+        "Street-style lines",
+        "Technical grind sequences",
+        "Gap combinations",
+        "Realistic BMX experience",
+        "Score challenges"
+      ],
+      "tips": [
+        "Link ledges with manuals",
+        "Use stairs for big combos",
+        "Explore alleyways for secrets",
+        "Watch for wallride spots"
+      ],
+      "keyLocations": [
+        "City Plaza - Central hub area",
+        "Stair Sets - Multiple rail options",
+        "Back Alleys - Hidden spots",
+        "Street Corners - Ledge combinations"
+      ]
+    },
+    {
+      "id": "rooftop-run",
+      "name": "Rooftop Run",
+      "difficulty": "Advanced",
+      "size": "Medium-Large",
+      "focus": "High-risk gaps and air tricks",
+      "description": "High-altitude playground across building rooftops. Features massive gaps and consequences for missed landings.",
+      "features": [
+        "Multiple building rooftops",
+        "Massive building-to-building gaps",
+        "Vertical drop opportunities",
+        "Unique vantage points",
+        "High-consequence gameplay"
+      ],
+      "hiddenSpots": 10,
+      "challengeCount": 40,
+      "bestFor": [
+        "Big air tricks",
+        "Long-distance gaps",
+        "High score attempts",
+        "Advanced players",
+        "Epic replays"
+      ],
+      "tips": [
+        "Speed management crucial",
+        "Scout gaps before attempting",
+        "Use replay to plan lines",
+        "Bail recovery important"
+      ],
+      "keyLocations": [
+        "Main Rooftop - Starting area",
+        "The Big Gap - Signature jump",
+        "Helipad - High point",
+        "AC Units - Technical obstacles"
+      ]
+    },
+    {
+      "id": "construction-zone",
+      "name": "Construction Zone",
+      "difficulty": "Intermediate-Advanced",
+      "size": "Large",
+      "focus": "Vertical variation and exploration",
+      "description": "Multi-level construction site with scaffolding, equipment, and unique industrial obstacles. Rewards creative line building.",
+      "features": [
+        "Scaffolding rail networks",
+        "Multi-level structures",
+        "Construction equipment obstacles",
+        "Unique transfer opportunities",
+        "Industrial aesthetic"
+      ],
+      "hiddenSpots": 15,
+      "challengeCount": 50,
+      "bestFor": [
+        "Creative line building",
+        "Height variation combos",
+        "Exploration rewards",
+        "Unique trick opportunities",
+        "Challenge variety"
+      ],
+      "tips": [
+        "Explore every level",
+        "Scaffolding = long grinds",
+        "Look for elevator shafts",
+        "Use cranes creatively"
+      ],
+      "keyLocations": [
+        "Scaffolding Networks - Grinding heaven",
+        "Ground Level - Entry point",
+        "Upper Levels - Advanced sections",
+        "Crane Area - Unique obstacles"
+      ]
+    },
+    {
+      "id": "downtown-district",
+      "name": "Downtown District",
+      "difficulty": "Intermediate",
+      "size": "Extra Large",
+      "focus": "Open-world exploration",
+      "description": "Expansive urban environment with connected streets, plazas, and multiple districts. Perfect for long combo runs and exploration.",
+      "features": [
+        "Connected street sections",
+        "Multiple plaza areas",
+        "Diverse districts",
+        "Mixed spot types",
+        "Long combo potential"
+      ],
+      "hiddenSpots": 18,
+      "challengeCount": 55,
+      "bestFor": [
+        "Extended combo runs",
+        "Free exploration",
+        "Varied challenge types",
+        "Marathon sessions",
+        "Complete lines"
+      ],
+      "tips": [
+        "Map is interconnected",
+        "Learn district layouts",
+        "Plan long routes",
+        "Secrets in every corner"
+      ],
+      "keyLocations": [
+        "Central Plaza - Hub area",
+        "Shopping District - Rails and ledges",
+        "Park Section - Transition mix",
+        "Financial District - Technical spots"
+      ]
+    },
+    {
+      "id": "secret-compound",
+      "name": "Secret Compound",
+      "difficulty": "Expert",
+      "size": "Medium",
+      "focus": "Technical mastery",
+      "description": "Expert-level map designed for technical mastery. Features high-difficulty spots and precision requirements.",
+      "features": [
+        "High-difficulty spots",
+        "Technical line requirements",
+        "Precision-based obstacles",
+        "Expert-level challenges",
+        "Unique obstacle designs"
+      ],
+      "hiddenSpots": 9,
+      "challengeCount": 35,
+      "bestFor": [
+        "Expert players",
+        "Technical showcase",
+        "High-score competition",
+        "Mastery demonstration",
+        "Ultimate challenges"
+      ],
+      "tips": [
+        "Every spot is technical",
+        "Practice makes perfect",
+        "Study lines carefully",
+        "Expect to bail often"
+      ],
+      "keyLocations": [
+        "The Gauntlet - Ultimate challenge",
+        "Tech Zone - Precision required",
+        "Expert Rails - Advanced grinds",
+        "Final Challenge - Hardest spot"
+      ]
+    }
+  ],
+  "mapTypes": {
+    "street": ["urban-streets", "downtown-district"],
+    "park": ["skate-park"],
+    "vertical": ["rooftop-run", "construction-zone"],
+    "expert": ["secret-compound"]
+  }
+}
+

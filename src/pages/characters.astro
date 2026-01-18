@@ -1,0 +1,442 @@
+---
+import Layout from '../components/Layout.astro';
+import { User, Shirt, Award, Sparkles } from 'lucide-astro';
+---
+
+<Layout 
+  title="Character Customization"
+  description="Complete character customization guide for Streetdog BMX - Create your unique rider with extensive clothing and appearance options."
+  keywords={['streetdog bmx customization', 'character creator', 'bmx rider customization']}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="breadcrumbs text-sm mb-4">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>Character Customization</li>
+        </ul>
+      </div>
+      
+      <h1 class="text-5xl font-bold mb-4">
+        Character <span class="text-primary">Customization</span>
+      </h1>
+      <p class="text-xl opacity-80">
+        Create your unique BMX rider with extensive customization options
+      </p>
+    </div>
+    
+    <div class="prose-custom max-w-none">
+      <!-- Intro -->
+      <section class="mb-12">
+        <div class="alert alert-info">
+          <Sparkles class="h-6 w-6" />
+          <div>
+            <h3 class="font-bold">By Riders, For Riders</h3>
+            <div class="text-sm">Streetdog BMX offers deep character customization created by BMX riders for BMX riders. Every player can create a unique rider identity that represents their personal style.</div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Customization Categories -->
+      <section class="mb-12">
+        <h2 class="flex items-center gap-3">
+          <User class="h-8 w-8 text-primary" />
+          Customization Categories
+        </h2>
+        
+        <!-- Appearance -->
+        <div class="card bg-base-200 mb-6">
+          <div class="card-body">
+            <h3 class="card-title text-2xl text-primary">Appearance</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+              <div>
+                <h4 class="font-bold mb-3">Facial Features</h4>
+                <ul class="space-y-2 text-sm">
+                  <li><strong>Face Shape:</strong> Multiple face shape variations</li>
+                  <li><strong>Skin Tone:</strong> Full range of realistic skin tones</li>
+                  <li><strong>Hairstyles:</strong> Various hair options (short, long, mohawk, etc.)</li>
+                  <li><strong>Hair Color:</strong> Natural and vibrant color options</li>
+                  <li><strong>Facial Hair:</strong> Beards, mustaches, clean shaven</li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 class="font-bold mb-3">Body & Details</h4>
+                <ul class="space-y-2 text-sm">
+                  <li><strong>Body Type:</strong> Various build options</li>
+                  <li><strong>Tattoos:</strong> Multiple placement options and designs</li>
+                  <li><strong>Tattoo Positioning:</strong> Arms, legs, torso, neck</li>
+                  <li><strong>Height:</strong> Character height variations</li>
+                  <li><strong>Build:</strong> Slim to athletic proportions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Clothing -->
+        <div class="card bg-base-200 mb-6">
+          <div class="card-body">
+            <h3 class="card-title text-2xl text-secondary flex items-center gap-2">
+              <Shirt class="h-6 w-6" />
+              Clothing Options
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+              <!-- Headwear -->
+              <div class="bg-base-300 rounded-lg p-4">
+                <h4 class="font-bold text-primary mb-3">Headwear</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Baseball caps (various brands)</li>
+                  <li>• Beanies (multiple colors)</li>
+                  <li>• Helmets (full-face, half-shell)</li>
+                  <li>• Bandanas</li>
+                  <li>• Bare head option</li>
+                  <li>• Snapbacks</li>
+                </ul>
+              </div>
+              
+              <!-- Tops -->
+              <div class="bg-base-300 rounded-lg p-4">
+                <h4 class="font-bold text-primary mb-3">Tops</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• T-shirts (graphic designs)</li>
+                  <li>• Hoodies (pullover & zip-up)</li>
+                  <li>• Tank tops</li>
+                  <li>• Long sleeve shirts</li>
+                  <li>• Jersey styles</li>
+                  <li>• Flannel shirts</li>
+                  <li>• Jackets</li>
+                </ul>
+              </div>
+              
+              <!-- Bottoms -->
+              <div class="bg-base-300 rounded-lg p-4">
+                <h4 class="font-bold text-primary mb-3">Bottoms</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Jeans (skinny, regular, baggy)</li>
+                  <li>• Shorts (cargo, athletic)</li>
+                  <li>• Track pants</li>
+                  <li>• Joggers</li>
+                  <li>• Chinos</li>
+                  <li>• Various colors & patterns</li>
+                </ul>
+              </div>
+              
+              <!-- Footwear -->
+              <div class="bg-base-300 rounded-lg p-4">
+                <h4 class="font-bold text-primary mb-3">Footwear</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• BMX-specific shoes</li>
+                  <li>• Skate shoes</li>
+                  <li>• Sneakers (various styles)</li>
+                  <li>• High-tops & low-tops</li>
+                  <li>• Multiple colorways</li>
+                  <li>• Brand variations</li>
+                </ul>
+              </div>
+              
+              <!-- Accessories -->
+              <div class="bg-base-300 rounded-lg p-4">
+                <h4 class="font-bold text-primary mb-3">Accessories</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Gloves (fingerless, full)</li>
+                  <li>• Knee pads</li>
+                  <li>• Elbow pads</li>
+                  <li>• Glasses/Sunglasses</li>
+                  <li>• Jewelry (chains, rings)</li>
+                  <li>• Watches</li>
+                  <li>• Backpacks</li>
+                </ul>
+              </div>
+              
+              <!-- Protection Gear -->
+              <div class="bg-base-300 rounded-lg p-4">
+                <h4 class="font-bold text-primary mb-3">Protection Gear</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Full protective sets</li>
+                  <li>• Minimal protection</li>
+                  <li>• Mix and match options</li>
+                  <li>• Color coordination</li>
+                  <li>• Professional rider look</li>
+                  <li>• Casual street style</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Unlocking Options -->
+      <section class="mb-12">
+        <h2 class="flex items-center gap-3">
+          <Award class="h-8 w-8 text-accent" />
+          Unlocking Customization Options
+        </h2>
+        
+        <p>Customization items are unlocked through gameplay progression:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+          <div class="card bg-gradient-to-br from-success/20 to-success/5 border border-success/20">
+            <div class="card-body">
+              <h3 class="card-title text-success">Completing Challenges</h3>
+              <p class="text-sm mb-3">270+ challenges reward clothing and customization unlocks</p>
+              <ul class="text-sm space-y-2">
+                <li>✓ Trick challenges unlock related gear</li>
+                <li>✓ Map challenges unlock location-themed items</li>
+                <li>✓ Score challenges unlock premium items</li>
+                <li>✓ Hidden spot challenges unlock rare gear</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-warning/20 to-warning/5 border border-warning/20">
+            <div class="card-body">
+              <h3 class="card-title text-warning">Score Achievements</h3>
+              <p class="text-sm mb-3">Hit score milestones for exclusive items</p>
+              <ul class="text-sm space-y-2">
+                <li>✓ 10,000 points: Basic unlocks</li>
+                <li>✓ 50,000 points: Intermediate items</li>
+                <li>✓ 100,000 points: Advanced gear</li>
+                <li>✓ 250,000+ points: Elite cosmetics</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Map Exploration</h3>
+              <p class="text-sm mb-3">Find hidden spots for unique rewards</p>
+              <ul class="text-sm space-y-2">
+                <li>✓ Each map has secret spots</li>
+                <li>✓ Discover all spots for map-themed gear</li>
+                <li>✓ Rare items in hardest-to-reach places</li>
+                <li>✓ Exploration rewards creativity</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/20">
+            <div class="card-body">
+              <h3 class="card-title text-secondary">Game Progress</h3>
+              <p class="text-sm mb-3">Natural progression through gameplay</p>
+              <ul class="text-sm space-y-2">
+                <li>✓ Level-based unlocks</li>
+                <li>✓ Time played rewards</li>
+                <li>✓ Skill progression milestones</li>
+                <li>✓ Complete content for full wardrobe</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Style Guides -->
+      <section class="mb-12">
+        <h2>Character Style Guides</h2>
+        
+        <p>Popular style archetypes to inspire your character creation:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-6">
+          <div class="card bg-base-200 border-2 border-primary">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Classic BMX</h3>
+              <p class="text-sm mb-3">Traditional rider look with protective gear</p>
+              <ul class="text-xs space-y-1">
+                <li>• Full-face helmet or half-shell</li>
+                <li>• Jersey or graphic tee</li>
+                <li>• Knee & elbow pads</li>
+                <li>• BMX-specific shoes</li>
+                <li>• Gloves</li>
+                <li>• Athletic pants or jeans</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200 border-2 border-secondary">
+            <div class="card-body">
+              <h3 class="card-title text-secondary">Street Style</h3>
+              <p class="text-sm mb-3">Urban clothing, minimal protection</p>
+              <ul class="text-xs space-y-1">
+                <li>• Snapback or beanie</li>
+                <li>• Hoodie or graphic tee</li>
+                <li>• Minimal pads (optional)</li>
+                <li>• Skate shoes</li>
+                <li>• Jeans or joggers</li>
+                <li>• Accessories (chain, watch)</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200 border-2 border-accent">
+            <div class="card-body">
+              <h3 class="card-title text-accent">Pro Rider</h3>
+              <p class="text-sm mb-3">Sponsored look with matching gear</p>
+              <ul class="text-xs space-y-1">
+                <li>• Branded helmet</li>
+                <li>• Team jersey</li>
+                <li>• Coordinated pads</li>
+                <li>• Signature shoes</li>
+                <li>• Gloves</li>
+                <li>• Matching colors throughout</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200 border-2 border-warning">
+            <div class="card-body">
+              <h3 class="card-title text-warning">Unique Character</h3>
+              <p class="text-sm mb-3">Mix styles for personal identity</p>
+              <ul class="text-xs space-y-1">
+                <li>• Unexpected combinations</li>
+                <li>• Bold color choices</li>
+                <li>• Standout tattoos</li>
+                <li>• Creative accessories</li>
+                <li>• Individual expression</li>
+                <li>• Break the rules!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Creating Your Rider -->
+      <section class="mb-12">
+        <h2>Creating Your Perfect Rider</h2>
+        
+        <div class="bg-base-200 rounded-2xl p-6">
+          <h3 class="text-xl font-bold mb-4">Step-by-Step Guide</h3>
+          
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="badge badge-primary badge-lg">1</div>
+              <div class="flex-grow">
+                <h4 class="font-bold mb-2">Start with Base Features</h4>
+                <p class="text-sm opacity-80">Choose body type, skin tone, and basic proportions. This is your foundation.</p>
+              </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="flex gap-4">
+              <div class="badge badge-primary badge-lg">2</div>
+              <div class="flex-grow">
+                <h4 class="font-bold mb-2">Define Face & Hair</h4>
+                <p class="text-sm opacity-80">Select facial features, hairstyle, and hair color. Add facial hair if desired.</p>
+              </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="flex gap-4">
+              <div class="badge badge-primary badge-lg">3</div>
+              <div class="flex-grow">
+                <h4 class="font-bold mb-2">Add Personal Details</h4>
+                <p class="text-sm opacity-80">Tattoos and unique features that make your rider stand out.</p>
+              </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="flex gap-4">
+              <div class="badge badge-primary badge-lg">4</div>
+              <div class="flex-grow">
+                <h4 class="font-bold mb-2">Choose Clothing Style</h4>
+                <p class="text-sm opacity-80">Top-to-bottom outfit selection. Consider cohesive color scheme or bold contrasts.</p>
+              </div>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="flex gap-4">
+              <div class="badge badge-primary badge-lg">5</div>
+              <div class="flex-grow">
+                <h4 class="font-bold mb-2">Final Touches</h4>
+                <p class="text-sm opacity-80">Accessories, protection gear, and color coordination. Fine-tune until perfect!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Tips -->
+      <section class="mb-12">
+        <h2>Customization Tips</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Style Tips</h3>
+              <ul class="text-sm space-y-2">
+                <li>✓ Experiment with different combinations</li>
+                <li>✓ Color coordination enhances aesthetics</li>
+                <li>✓ Match rider and bike themes</li>
+                <li>✓ Unlock items through gameplay</li>
+                <li>✓ Update look as you progress</li>
+                <li>✓ Screenshot your favorite setups</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-secondary">Progression Tips</h3>
+              <ul class="text-sm space-y-2">
+                <li>✓ Complete challenges for unlocks</li>
+                <li>✓ Explore every map thoroughly</li>
+                <li>✓ Focus on score milestones</li>
+                <li>✓ Try different playstyles</li>
+                <li>✓ Collect all hidden spots</li>
+                <li>✓ Play consistently for time rewards</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Community Showcase -->
+      <section class="mb-12">
+        <h2>Community Showcase</h2>
+        
+        <div class="alert alert-warning">
+          <Award class="h-6 w-6" />
+          <div>
+            <h3 class="font-bold">Coming Soon!</h3>
+            <div class="text-sm">Community character submissions will be featured here. Share your unique rider designs on Discord for a chance to be showcased!</div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Related Pages -->
+      <section>
+        <h2>Continue Your Journey</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <a href="/builds/" class="card bg-base-200 hover:bg-base-300 card-hover">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Bike Builds</h3>
+              <p class="text-sm">Match your bike to your rider's aesthetic</p>
+            </div>
+          </a>
+          
+          <a href="/guides/beginner-guide/" class="card bg-base-200 hover:bg-base-300 card-hover">
+            <div class="card-body">
+              <h3 class="card-title text-secondary">Beginner's Guide</h3>
+              <p class="text-sm">Learn the game and unlock more items</p>
+            </div>
+          </a>
+          
+          <a href="/official/" class="card bg-base-200 hover:bg-base-300 card-hover">
+            <div class="card-body">
+              <h3 class="card-title text-accent">Join Community</h3>
+              <p class="text-sm">Share your character designs with others</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>
+

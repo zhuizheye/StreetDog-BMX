@@ -1,0 +1,81 @@
+---
+import { ExternalLink } from 'lucide-astro';
+import siteData from '../data/site.json';
+
+const { footer, site, game } = siteData;
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer footer-center p-10 bg-base-200 text-base-content mt-20 border-t border-primary/20">
+  <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- About -->
+      <div class="text-left">
+        <h3 class="font-bold text-lg mb-3 text-primary">About This Wiki</h3>
+        <p class="text-sm opacity-80">
+          Fan-created comprehensive guide for {game.title}. 
+          Featuring tricks, maps, builds, and strategies to master the game.
+        </p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="text-left">
+        <h3 class="font-bold text-lg mb-3 text-primary">Quick Links</h3>
+        <ul class="text-sm space-y-2">
+          <li><a href="/guides/" class="link link-hover">Guides</a></li>
+          <li><a href="/tier-list/" class="link link-hover">Tier List</a></li>
+          <li><a href="/maps/" class="link link-hover">Maps</a></li>
+          <li><a href="/builds/" class="link link-hover">Builds</a></li>
+          <li><a href="/codes/" class="link link-hover">Codes</a></li>
+          <li><a href="/official/" class="link link-hover">Official Links</a></li>
+        </ul>
+      </div>
+      
+      <!-- Official -->
+      <div class="text-left">
+        <h3 class="font-bold text-lg mb-3 text-primary">Official Links</h3>
+        <div class="flex flex-col gap-2">
+          {footer.social.map((social) => (
+            <a 
+              href={social.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="btn btn-sm btn-outline gap-2"
+            >
+              <ExternalLink class="h-4 w-4" />
+              {social.platform}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+    
+    <!-- Disclaimer -->
+    <div class="divider"></div>
+    
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="text-xs opacity-70 mb-4">
+        <strong>Disclaimer:</strong> This is a fan-created wiki and is not officially affiliated with 
+        {game.developer} or {game.publisher}. All game content, trademarks, and assets belong to their 
+        respective owners.
+      </p>
+      
+      <div class="flex flex-wrap justify-center gap-4 text-xs mb-4">
+        {footer.links.map((link) => (
+          <a href={link.href} class="link link-hover">{link.label}</a>
+        ))}
+      </div>
+      
+      <p class="text-sm opacity-60">
+        {footer.copyright}
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: linear-gradient(to bottom, rgba(45, 45, 45, 0.5), rgba(26, 26, 26, 1));
+  }
+</style>
+

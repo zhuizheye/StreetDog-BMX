@@ -1,0 +1,77 @@
+{
+  "codes": {
+    "status": "No official codes announced yet",
+    "lastChecked": "2026-01-18",
+    "description": "Streetdog BMX may release promotional codes for unlockables, cosmetics, or special content. Check back regularly for updates.",
+    "howToRedeem": [
+      "Check if game has code redemption system (location TBD)",
+      "Enter code exactly as shown (case-sensitive)",
+      "Codes may be platform-specific",
+      "Codes may have expiration dates",
+      "One-time use per account"
+    ],
+    "whereToFindCodes": [
+      {
+        "source": "Official Social Media",
+        "platforms": ["Instagram @yeahusgames", "TikTok @yeahusgames"],
+        "description": "Developer occasionally shares codes during events"
+      },
+      {
+        "source": "Discord Server",
+        "description": "Community announcements and special events"
+      },
+      {
+        "source": "Twitch Streams",
+        "description": "Content creator partnerships and giveaways"
+      },
+      {
+        "source": "Game Updates",
+        "description": "Patch notes may include promotional codes"
+      },
+      {
+        "source": "Community Events",
+        "description": "Special events like tournaments or milestones"
+      }
+    ],
+    "activeCodes": [],
+    "expiredCodes": [],
+    "futureCodeTypes": [
+      {
+        "type": "Cosmetic Codes",
+        "description": "Unlock special bike parts, colors, or clothing items"
+      },
+      {
+        "type": "Challenge Codes",
+        "description": "Unlock bonus challenges or objectives"
+      },
+      {
+        "type": "XP/Progression Codes",
+        "description": "Bonus progression or unlock currency"
+      },
+      {
+        "type": "Event Codes",
+        "description": "Time-limited special content"
+      }
+    ],
+    "tips": [
+      "Follow official social media for code announcements",
+      "Join Discord community for real-time updates",
+      "Codes are often time-limited - redeem quickly",
+      "Check this page regularly for new codes",
+      "Some codes may be platform-exclusive"
+    ]
+  },
+  "placeholder": {
+    "message": "🔒 No active codes at this time",
+    "checkBack": "Check back soon! Codes are typically released during:",
+    "occasions": [
+      "Game launch celebrations",
+      "Major updates or patches",
+      "Holiday events",
+      "Community milestones",
+      "Content creator partnerships",
+      "Social media promotions"
+    ]
+  }
+}
+

@@ -1,0 +1,78 @@
+---
+import { Map, Award } from 'lucide-astro';
+
+interface Props {
+  map: {
+    id: string;
+    name: string;
+    difficulty: string;
+    size: string;
+    focus: string;
+    description: string;
+    hiddenSpots: number;
+    challengeCount: number;
+    bestFor: string[];
+  };
+}
+
+const { map } = Astro.props;
+
+const difficultyColor = {
+  'Beginner': 'badge-success',
+  'Intermediate': 'badge-warning',
+  'Advanced': 'badge-error',
+  'Expert': 'badge-error',
+  'Intermediate-Advanced': 'badge-warning',
+};
+---
+
+<div class="card bg-base-200 shadow-xl card-hover">
+  <div class="card-body">
+    <div class="flex items-start justify-between mb-2">
+      <div class="flex items-center gap-3">
+        <Map class="h-6 w-6 text-primary" />
+        <h3 class="card-title text-xl">{map.name}</h3>
+      </div>
+      <div class={`badge ${difficultyColor[map.difficulty as keyof typeof difficultyColor] || 'badge-info'}`}>
+        {map.difficulty}
+      </div>
+    </div>
+    
+    <div class="flex gap-2 mb-3">
+      <div class="badge badge-outline">{map.size}</div>
+      <div class="badge badge-outline">{map.focus}</div>
+    </div>
+    
+    <p class="opacity-80 text-sm mb-4 line-clamp-2">
+      {map.description}
+    </p>
+    
+    <div class="grid grid-cols-2 gap-2 mb-4">
+      <div class="stat bg-base-300 rounded-lg p-3">
+        <div class="stat-title text-xs">Hidden Spots</div>
+        <div class="stat-value text-2xl text-primary">{map.hiddenSpots}</div>
+      </div>
+      <div class="stat bg-base-300 rounded-lg p-3">
+        <div class="stat-title text-xs">Challenges</div>
+        <div class="stat-value text-2xl text-secondary">{map.challengeCount}</div>
+      </div>
+    </div>
+    
+    <div class="mb-4">
+      <h4 class="font-semibold text-sm mb-2 flex items-center gap-2">
+        <Award class="h-4 w-4 text-accent" />
+        Best For:
+      </h4>
+      <div class="flex flex-wrap gap-1">
+        {map.bestFor.slice(0, 3).map((item) => (
+          <span class="badge badge-sm badge-accent badge-outline">{item}</span>
+        ))}
+      </div>
+    </div>
+    
+    <div class="card-actions justify-end">
+      <a href="/maps/" class="btn btn-sm btn-primary">View Details</a>
+    </div>
+  </div>
+</div>
+

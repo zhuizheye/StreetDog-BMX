@@ -1,0 +1,276 @@
+---
+import Layout from '../components/Layout.astro';
+import { ExternalLink, MessageCircle, Users, Youtube, Twitter, Globe, Github } from 'lucide-astro';
+---
+
+<Layout 
+  title="Official Links"
+  description="Official Streetdog BMX links - Connect with the community, follow social media, and find all official channels and resources."
+  keywords={['streetdog bmx official', 'discord', 'community', 'social media', 'developer']}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="breadcrumbs text-sm mb-4">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>Official Links</li>
+        </ul>
+      </div>
+      
+      <h1 class="text-5xl font-bold mb-4">
+        Official <span class="text-primary">Links</span>
+      </h1>
+      <p class="text-xl opacity-80">
+        Connect with the Streetdog BMX community and follow official channels
+      </p>
+    </div>
+    
+    <!-- Primary Links -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Primary Channels</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Official Website -->
+        <a 
+          href="https://streetdogbmx.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="card bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary hover:border-primary/50 transition-all card-hover"
+        >
+          <div class="card-body">
+            <div class="flex items-center gap-3 mb-3">
+              <Globe class="h-8 w-8 text-primary" />
+              <h3 class="card-title text-2xl">Official Website</h3>
+            </div>
+            <p class="opacity-80 mb-4">
+              The official Streetdog BMX website with news, updates, and game information.
+            </p>
+            <div class="flex items-center gap-2 text-sm text-primary">
+              <span>Visit Website</span>
+              <ExternalLink class="h-4 w-4" />
+            </div>
+          </div>
+        </a>
+        
+        <!-- Discord -->
+        <a 
+          href="https://discord.gg/streetdogbmx" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="card bg-gradient-to-br from-secondary/20 to-secondary/5 border-2 border-secondary hover:border-secondary/50 transition-all card-hover"
+        >
+          <div class="card-body">
+            <div class="flex items-center gap-3 mb-3">
+              <MessageCircle class="h-8 w-8 text-secondary" />
+              <h3 class="card-title text-2xl">Discord Server</h3>
+            </div>
+            <p class="opacity-80 mb-4">
+              Join the official Discord community. Chat with players, share clips, get help, and stay updated.
+            </p>
+            <div class="flex items-center gap-2 text-sm text-secondary">
+              <span>Join Discord</span>
+              <ExternalLink class="h-4 w-4" />
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Social Media -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Social Media</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- YouTube -->
+        <a 
+          href="https://youtube.com/@streetdogbmx" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="card bg-base-200 hover:bg-base-300 transition-colors card-hover"
+        >
+          <div class="card-body items-center text-center">
+            <Youtube class="h-12 w-12 text-error mb-3" />
+            <h3 class="card-title text-lg">YouTube</h3>
+            <p class="text-xs opacity-70">Trailers, tutorials, highlights</p>
+            <ExternalLink class="h-4 w-4 mt-2 opacity-50" />
+          </div>
+        </a>
+        
+        <!-- Twitter/X -->
+        <a 
+          href="https://twitter.com/streetdogbmx" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="card bg-base-200 hover:bg-base-300 transition-colors card-hover"
+        >
+          <div class="card-body items-center text-center">
+            <Twitter class="h-12 w-12 text-info mb-3" />
+            <h3 class="card-title text-lg">Twitter / X</h3>
+            <p class="text-xs opacity-70">News & quick updates</p>
+            <ExternalLink class="h-4 w-4 mt-2 opacity-50" />
+          </div>
+        </a>
+        
+        <!-- Reddit -->
+        <a 
+          href="https://reddit.com/r/streetdogbmx" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="card bg-base-200 hover:bg-base-300 transition-colors card-hover"
+        >
+          <div class="card-body items-center text-center">
+            <Users class="h-12 w-12 text-warning mb-3" />
+            <h3 class="card-title text-lg">Reddit</h3>
+            <p class="text-xs opacity-70">Community discussions</p>
+            <ExternalLink class="h-4 w-4 mt-2 opacity-50" />
+          </div>
+        </a>
+        
+        <!-- GitHub (if applicable) -->
+        <a 
+          href="https://github.com/streetdogbmx" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="card bg-base-200 hover:bg-base-300 transition-colors card-hover"
+        >
+          <div class="card-body items-center text-center">
+            <Github class="h-12 w-12 text-accent mb-3" />
+            <h3 class="card-title text-lg">GitHub</h3>
+            <p class="text-xs opacity-70">Community tools & mods</p>
+            <ExternalLink class="h-4 w-4 mt-2 opacity-50" />
+          </div>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Store Links -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Purchase & Download</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a 
+          href="https://store.steampowered.com/app/streetdogbmx" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn btn-lg btn-primary gap-2"
+        >
+          <Globe class="h-5 w-5" />
+          Steam
+        </a>
+        
+        <a 
+          href="https://store.playstation.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn btn-lg btn-secondary gap-2"
+        >
+          <Globe class="h-5 w-5" />
+          PlayStation Store
+        </a>
+        
+        <a 
+          href="https://www.xbox.com/games/store" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn btn-lg btn-accent gap-2"
+        >
+          <Globe class="h-5 w-5" />
+          Xbox Store
+        </a>
+        
+        <a 
+          href="https://www.nintendo.com/store" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn btn-lg btn-error gap-2"
+        >
+          <Globe class="h-5 w-5" />
+          Nintendo eShop
+        </a>
+      </div>
+    </section>
+    
+    <!-- Community Resources -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Community Resources</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-primary">Official Wiki</h3>
+            <p class="text-sm opacity-80 mb-4">
+              Comprehensive game documentation maintained by the community.
+            </p>
+            <a href="#" class="btn btn-sm btn-outline gap-2">
+              Visit Wiki
+              <ExternalLink class="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-secondary">Support Center</h3>
+            <p class="text-sm opacity-80 mb-4">
+              Get help with technical issues, bugs, and game questions.
+            </p>
+            <a href="#" class="btn btn-sm btn-outline gap-2">
+              Get Support
+              <ExternalLink class="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-accent">Bug Reports</h3>
+            <p class="text-sm opacity-80 mb-4">
+              Report bugs and issues to help improve the game.
+            </p>
+            <a href="#" class="btn btn-sm btn-outline gap-2">
+              Report Bug
+              <ExternalLink class="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Content Creators -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Featured Content Creators</h2>
+      
+      <div class="alert alert-info">
+        <Users class="h-6 w-6" />
+        <div>
+          <h3 class="font-bold">Support the Community</h3>
+          <div class="text-sm">Follow these talented creators for gameplay, tutorials, and entertainment. Are you a creator? Join the Discord to get featured!</div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="https://discord.gg/streetdogbmx" target="_blank" rel="noopener noreferrer" class="btn btn-primary gap-2">
+          <MessageCircle class="h-4 w-4" />
+          Join Creator Program
+        </a>
+      </div>
+    </section>
+    
+    <!-- Disclaimer -->
+    <section class="bg-base-200 rounded-2xl p-8">
+      <h3 class="font-bold text-lg mb-4">Important Note</h3>
+      <p class="text-sm opacity-80 mb-4">
+        This is an unofficial fan-made wiki and guide website for Streetdog BMX. 
+        We are not affiliated with or endorsed by the official developers.
+      </p>
+      <p class="text-sm opacity-80">
+        For official information, support, and announcements, please visit the official website and social media channels linked above.
+      </p>
+      <div class="mt-6">
+        <a href="/legal/disclaimer/" class="link link-primary text-sm">Read Full Disclaimer</a>
+      </div>
+    </section>
+  </div>
+</Layout>
+

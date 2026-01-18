@@ -1,0 +1,223 @@
+---
+import Layout from '../components/Layout.astro';
+import CodesList from '../components/CodesList.astro';
+import { Gift, AlertCircle, ExternalLink, Clock } from 'lucide-astro';
+import codesData from '../data/codes.json';
+
+const { codes, placeholder } = codesData;
+---
+
+<Layout 
+  title="Promo Codes"
+  description="Active promo codes for Streetdog BMX - Unlock free items, cosmetics, and special content with promotional codes."
+  keywords={['streetdog bmx codes', 'promo codes', 'free items', 'redeem codes', 'streetdog bmx cheats']}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="breadcrumbs text-sm mb-4">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>Promo Codes</li>
+        </ul>
+      </div>
+      
+      <h1 class="text-5xl font-bold mb-4">
+        Promo <span class="text-primary">Codes</span>
+      </h1>
+      <p class="text-xl opacity-80">
+        Free unlockables, cosmetics, and special content through promotional codes
+      </p>
+    </div>
+    
+    <!-- Status Alert -->
+    <div class="alert alert-warning mb-8">
+      <AlertCircle class="h-6 w-6" />
+      <div>
+        <h3 class="font-bold">Current Status: {codes.status}</h3>
+        <div class="text-sm">Last checked: {codes.lastChecked}</div>
+      </div>
+    </div>
+    
+    <!-- Active Codes Section -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6 flex items-center gap-3">
+        <Gift class="h-8 w-8 text-primary" />
+        Active Codes
+      </h2>
+      
+      {codes.activeCodes.length === 0 ? (
+        <div class="card bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20">
+          <div class="card-body text-center py-12">
+            <Gift class="h-20 w-20 mx-auto mb-6 text-primary opacity-50" />
+            <h3 class="text-2xl font-bold mb-4">{placeholder.message}</h3>
+            <p class="opacity-80 mb-6">{placeholder.checkBack}</p>
+            
+            <div class="max-w-2xl mx-auto">
+              <h4 class="font-bold mb-4">Codes are typically released during:</h4>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                {placeholder.occasions.map((occasion) => (
+                  <div class="badge badge-lg badge-outline">{occasion}</div>
+                ))}
+              </div>
+            </div>
+            
+            <div class="mt-8">
+              <a href="/official/" class="btn btn-primary gap-2">
+                <ExternalLink class="h-4 w-4" />
+                Follow Official Channels
+              </a>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <CodesList codes={codes.activeCodes} />
+      )}
+    </section>
+    
+    <!-- How to Redeem -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">How to Redeem Codes</h2>
+      
+      <div class="card bg-base-200">
+        <div class="card-body">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="font-bold text-lg mb-4 text-primary">Redemption Steps</h3>
+              <ol class="space-y-3 text-sm">
+                {codes.howToRedeem.map((step, index) => (
+                  <li class="flex gap-3">
+                    <span class="badge badge-primary">{index + 1}</span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+            
+            <div>
+              <h3 class="font-bold text-lg mb-4 text-secondary">Important Notes</h3>
+              <ul class="space-y-2 text-sm">
+                <li class="flex gap-2">
+                  <AlertCircle class="h-4 w-4 text-warning flex-shrink-0 mt-0.5" />
+                  <span>Codes are <strong>case-sensitive</strong> - enter exactly as shown</span>
+                </li>
+                <li class="flex gap-2">
+                  <Clock class="h-4 w-4 text-warning flex-shrink-0 mt-0.5" />
+                  <span>Many codes have <strong>expiration dates</strong> - redeem quickly</span>
+                </li>
+                <li class="flex gap-2">
+                  <Gift class="h-4 w-4 text-warning flex-shrink-0 mt-0.5" />
+                  <span>Codes are typically <strong>one-time use</strong> per account</span>
+                </li>
+                <li class="flex gap-2">
+                  <ExternalLink class="h-4 w-4 text-warning flex-shrink-0 mt-0.5" />
+                  <span>Some codes may be <strong>platform-specific</strong></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Where to Find Codes -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Where to Find Codes</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {codes.whereToFindCodes.map((source) => (
+          <div class="card bg-base-200 hover:bg-base-300 transition-colors">
+            <div class="card-body">
+              <h3 class="card-title text-primary">{source.source}</h3>
+              {source.platforms && (
+                <div class="flex flex-wrap gap-2 mb-3">
+                  {source.platforms.map((platform) => (
+                    <div class="badge badge-sm badge-outline">{platform}</div>
+                  ))}
+                </div>
+              )}
+              <p class="text-sm opacity-80">{source.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="/official/" class="btn btn-primary btn-lg gap-2">
+          <ExternalLink class="h-5 w-5" />
+          Visit Official Links
+        </a>
+      </div>
+    </section>
+    
+    <!-- Future Code Types -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">What to Expect from Codes</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {codes.futureCodeTypes.map((type) => (
+          <div class="card bg-gradient-to-br from-primary/5 to-secondary/5 border border-primary/10">
+            <div class="card-body">
+              <h3 class="card-title text-secondary">{type.type}</h3>
+              <p class="text-sm opacity-80">{type.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+    
+    <!-- Tips -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Code Hunting Tips</h2>
+      
+      <div class="bg-base-200 rounded-2xl p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {codes.tips.map((tip) => (
+            <div class="flex gap-3">
+              <Gift class="h-5 w-5 text-primary flex-shrink-0 mt-1" />
+              <p class="text-sm">{tip}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    
+    <!-- Expired Codes -->
+    {codes.expiredCodes && codes.expiredCodes.length > 0 && (
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold mb-6">Expired Codes (Archive)</h2>
+        <p class="opacity-70 mb-6">These codes are no longer active but kept for reference.</p>
+        
+        <CodesList codes={codes.expiredCodes} />
+      </section>
+    )}
+    
+    <!-- Update Schedule -->
+    <section class="bg-gradient-to-br from-accent/10 to-info/10 rounded-3xl p-8">
+      <div class="text-center">
+        <Clock class="h-12 w-12 mx-auto mb-4 text-accent" />
+        <h2 class="text-2xl font-bold mb-4">Stay Updated</h2>
+        <p class="opacity-80 max-w-2xl mx-auto mb-6">
+          This page is regularly updated with new codes as they become available. 
+          Bookmark this page and check back frequently, especially during special events and game updates!
+        </p>
+        
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/official/" class="btn btn-accent gap-2">
+            <ExternalLink class="h-4 w-4" />
+            Official Links
+          </a>
+          <button class="btn btn-outline" onclick="location.reload()">
+            <Clock class="h-4 w-4" />
+            Refresh Page
+          </button>
+        </div>
+        
+        <p class="text-xs opacity-60 mt-6">
+          Last updated: {codes.lastChecked}
+        </p>
+      </div>
+    </section>
+  </div>
+</Layout>
+

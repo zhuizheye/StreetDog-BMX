@@ -1,0 +1,273 @@
+---
+import Layout from '../components/Layout.astro';
+import { Wrench, Calculator, Map, Image, ExternalLink } from 'lucide-astro';
+---
+
+<Layout 
+  title="Tools & Calculators"
+  description="Helpful tools and calculators for Streetdog BMX - Build calculators, score analyzers, map planners, and more community resources."
+  keywords={['streetdog bmx tools', 'bmx calculator', 'build planner', 'score calculator']}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="breadcrumbs text-sm mb-4">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>Tools & Calculators</li>
+        </ul>
+      </div>
+      
+      <h1 class="text-5xl font-bold mb-4">
+        Tools & <span class="text-primary">Calculators</span>
+      </h1>
+      <p class="text-xl opacity-80">
+        Helpful resources to enhance your Streetdog BMX experience
+      </p>
+    </div>
+    
+    <!-- Coming Soon Notice -->
+    <div class="alert alert-info mb-12">
+      <Wrench class="h-6 w-6" />
+      <div>
+        <h3 class="font-bold">Tools in Development</h3>
+        <div class="text-sm">Community tools and calculators are currently being developed. Check back soon for interactive build planners, score calculators, and more!</div>
+      </div>
+    </div>
+    
+    <!-- Planned Tools -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Planned Tools</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Build Calculator -->
+        <div class="card bg-base-200 border-2 border-primary/30">
+          <div class="card-body">
+            <div class="badge badge-warning mb-3">Coming Soon</div>
+            <Calculator class="h-10 w-10 text-primary mb-3" />
+            <h3 class="card-title">Build Calculator</h3>
+            <p class="text-sm opacity-80 mb-4">
+              Interactive tool to plan and compare bike builds. Visualize stats and performance characteristics before committing.
+            </p>
+            <h4 class="font-bold text-xs mb-2">Features:</h4>
+            <ul class="text-xs space-y-1">
+              <li>• Component selection</li>
+              <li>• Stat comparison</li>
+              <li>• Weight calculations</li>
+              <li>• Build sharing</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Score Calculator -->
+        <div class="card bg-base-200 border-2 border-secondary/30">
+          <div class="card-body">
+            <div class="badge badge-warning mb-3">Coming Soon</div>
+            <Calculator class="h-10 w-10 text-secondary mb-3" />
+            <h3 class="card-title">Score Calculator</h3>
+            <p class="text-sm opacity-80 mb-4">
+              Calculate potential combo scores. Plan your lines and see theoretical point totals before attempting.
+            </p>
+            <h4 class="font-bold text-xs mb-2">Features:</h4>
+            <ul class="text-xs space-y-1">
+              <li>• Trick selection</li>
+              <li>• Multiplier tracking</li>
+              <li>• Bonus calculations</li>
+              <li>• Combo optimization</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Map Planner -->
+        <div class="card bg-base-200 border-2 border-accent/30">
+          <div class="card-body">
+            <div class="badge badge-warning mb-3">Coming Soon</div>
+            <Map class="h-10 w-10 text-accent mb-3" />
+            <h3 class="card-title">Map Planner</h3>
+            <p class="text-sm opacity-80 mb-4">
+              Interactive map viewer with route planning. Mark hidden spots, plan lines, and share discoveries.
+            </p>
+            <h4 class="font-bold text-xs mb-2">Features:</h4>
+            <ul class="text-xs space-y-1">
+              <li>• Interactive map viewer</li>
+              <li>• Route drawing</li>
+              <li>• Hidden spot markers</li>
+              <li>• Community annotations</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Replay Analyzer -->
+        <div class="card bg-base-200 border-2 border-warning/30">
+          <div class="card-body">
+            <div class="badge badge-warning mb-3">Coming Soon</div>
+            <Image class="h-10 w-10 text-warning mb-3" />
+            <h3 class="card-title">Replay Analyzer</h3>
+            <p class="text-sm opacity-80 mb-4">
+              Upload and analyze your replays. Get detailed breakdowns of tricks, timing, and scoring opportunities.
+            </p>
+            <h4 class="font-bold text-xs mb-2">Features:</h4>
+            <ul class="text-xs space-y-1">
+              <li>• Replay upload</li>
+              <li>• Frame-by-frame analysis</li>
+              <li>• Scoring breakdown</li>
+              <li>• Improvement suggestions</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Challenge Tracker -->
+        <div class="card bg-base-200 border-2 border-info/30">
+          <div class="card-body">
+            <div class="badge badge-warning mb-3">Coming Soon</div>
+            <Wrench class="h-10 w-10 text-info mb-3" />
+            <h3 class="card-title">Challenge Tracker</h3>
+            <p class="text-sm opacity-80 mb-4">
+              Track your challenge completion across all maps. Filter by type, difficulty, and completion status.
+            </p>
+            <h4 class="font-bold text-xs mb-2">Features:</h4>
+            <ul class="text-xs space-y-1">
+              <li>• Progress tracking</li>
+              <li>• Map filtering</li>
+              <li>• Difficulty sorting</li>
+              <li>• Completion percentage</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Build Comparison -->
+        <div class="card bg-base-200 border-2 border-success/30">
+          <div class="card-body">
+            <div class="badge badge-warning mb-3">Coming Soon</div>
+            <Calculator class="h-10 w-10 text-success mb-3" />
+            <h3 class="card-title">Build Comparison</h3>
+            <p class="text-sm opacity-80 mb-4">
+              Compare multiple bike builds side-by-side. See differences in stats, components, and performance.
+            </p>
+            <h4 class="font-bold text-xs mb-2">Features:</h4>
+            <ul class="text-xs space-y-1">
+              <li>• Multi-build comparison</li>
+              <li>• Stat visualization</li>
+              <li>• Component differences</li>
+              <li>• Export comparison</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- External Resources -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">External Resources</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-primary flex items-center gap-2">
+              <ExternalLink class="h-5 w-5" />
+              Official Game Resources
+            </h3>
+            <ul class="text-sm space-y-2 mt-4">
+              <li>
+                <a href="/official/" class="link link-hover">Official Website & Links</a>
+              </li>
+              <li>
+                <a href="/official/" class="link link-hover">Discord Community</a>
+              </li>
+              <li>
+                <a href="/official/" class="link link-hover">Reddit Community</a>
+              </li>
+              <li>
+                <a href="/official/" class="link link-hover">YouTube Tutorials</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-secondary flex items-center gap-2">
+              <Wrench class="h-5 w-5" />
+              Community Tools
+            </h3>
+            <p class="text-sm opacity-80 mb-4">
+              Community-created tools and resources will be featured here once available. Have a tool to share?
+            </p>
+            <a href="/official/" class="btn btn-sm btn-outline">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Quick References -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Quick Reference Guides</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="/guides/tricks-combos/" class="card bg-base-200 hover:bg-base-300 card-hover">
+          <div class="card-body">
+            <h3 class="card-title text-sm">Tricks List</h3>
+            <p class="text-xs opacity-80">Complete trick database</p>
+          </div>
+        </a>
+        
+        <a href="/builds/" class="card bg-base-200 hover:bg-base-300 card-hover">
+          <div class="card-body">
+            <h3 class="card-title text-sm">Build Templates</h3>
+            <p class="text-xs opacity-80">Pre-made configurations</p>
+          </div>
+        </a>
+        
+        <a href="/maps/" class="card bg-base-200 hover:bg-base-300 card-hover">
+          <div class="card-body">
+            <h3 class="card-title text-sm">Map Guides</h3>
+            <p class="text-xs opacity-80">Location breakdowns</p>
+          </div>
+        </a>
+        
+        <a href="/tier-list/" class="card bg-base-200 hover:bg-base-300 card-hover">
+          <div class="card-body">
+            <h3 class="card-title text-sm">Tier Lists</h3>
+            <p class="text-xs opacity-80">Rankings & meta</p>
+          </div>
+        </a>
+        
+        <a href="/guides/advanced-techniques/" class="card bg-base-200 hover:bg-base-300 card-hover">
+          <div class="card-body">
+            <h3 class="card-title text-sm">Advanced Techniques</h3>
+            <p class="text-xs opacity-80">Expert strategies</p>
+          </div>
+        </a>
+        
+        <a href="/codes/" class="card bg-base-200 hover:bg-base-300 card-hover">
+          <div class="card-body">
+            <h3 class="card-title text-sm">Promo Codes</h3>
+            <p class="text-xs opacity-80">Active codes list</p>
+          </div>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Contribute -->
+    <section class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl p-8">
+      <div class="text-center">
+        <Wrench class="h-16 w-16 mx-auto mb-6 text-primary" />
+        <h2 class="text-3xl font-bold mb-4">Want to Contribute?</h2>
+        <p class="opacity-80 mb-6 max-w-2xl mx-auto">
+          Have an idea for a tool or calculator? Created something useful for the community? 
+          We'd love to feature it here!
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/official/" class="btn btn-primary gap-2">
+            <ExternalLink class="h-4 w-4" />
+            Join Discord
+          </a>
+          <a href="/official/" class="btn btn-outline">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+

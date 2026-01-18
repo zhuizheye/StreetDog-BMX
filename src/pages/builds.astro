@@ -1,0 +1,434 @@
+---
+import Layout from '../components/Layout.astro';
+import BuildCard from '../components/BuildCard.astro';
+import { Wrench, Star, Lightbulb, Palette } from 'lucide-astro';
+import buildsData from '../data/builds.json';
+
+const { builds, buildTips } = buildsData;
+---
+
+<Layout 
+  title="Bike Builds Guide"
+  description="Complete bike builds guide for Streetdog BMX - Optimal configurations for every playstyle with detailed component breakdowns."
+  keywords={['streetdog bmx builds', 'best bike build', 'bmx customization', 'bike setup guide']}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="breadcrumbs text-sm mb-4">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>Bike Builds</li>
+        </ul>
+      </div>
+      
+      <h1 class="text-5xl font-bold mb-4">
+        Bike <span class="text-primary">Builds</span> Guide
+      </h1>
+      <p class="text-xl opacity-80 mb-6">
+        Customize every aspect of your bike - Build your dream BMX machine
+      </p>
+      
+      <div class="alert alert-info">
+        <Wrench class="h-6 w-6" />
+        <div>
+          <h3 class="font-bold">Deep Customization</h3>
+          <div class="text-sm">In Streetdog BMX, you can customize nearly every aspect of your bike, right down to the spokes and chain color. Each component affects handling and aesthetics.</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Featured Builds -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Featured Builds</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {builds.map((build) => (
+          <BuildCard build={build} />
+        ))}
+      </div>
+    </section>
+    
+    <!-- Customization Components -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Customization Components</h2>
+      
+      <div class="space-y-6">
+        <!-- Frame -->
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title text-xl font-medium">
+            <div class="flex items-center gap-3">
+              <span class="badge badge-primary">Frame</span>
+              <span>The foundation of your bike</span>
+            </div>
+          </div>
+          <div class="collapse-content">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div>
+                <h4 class="font-bold mb-2">Frame Options</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• <strong>Frame Type:</strong> Street, Park, Flatland styles</li>
+                  <li>• <strong>Geometry:</strong> Affects handling characteristics</li>
+                  <li>• <strong>Weight:</strong> Light to heavy options</li>
+                  <li>• <strong>Material Finish:</strong> Matte, Gloss, Metallic</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Impact on Performance</h4>
+                <ul class="text-sm space-y-1">
+                  <li>✓ Weight affects speed and handling</li>
+                  <li>✓ Geometry changes responsiveness</li>
+                  <li>✓ Street frames: versatile all-rounders</li>
+                  <li>✓ Park frames: better for transitions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Handlebars -->
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title text-xl font-medium">
+            <div class="flex items-center gap-3">
+              <span class="badge badge-secondary">Handlebars</span>
+              <span>Control and comfort</span>
+            </div>
+          </div>
+          <div class="collapse-content">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div>
+                <h4 class="font-bold mb-2">Bar Specifications</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• <strong>Height (Rise):</strong> 7.5" - 10" options</li>
+                  <li>• <strong>Width:</strong> Narrow to wide configurations</li>
+                  <li>• <strong>Style:</strong> T-bars, 4-piece, 2-piece</li>
+                  <li>• <strong>Color/Finish:</strong> Match or contrast</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Choosing Bar Height</h4>
+                <ul class="text-sm space-y-1">
+                  <li>✓ Low bars (7.5-8"): Speed/aerodynamics</li>
+                  <li>✓ Mid bars (8.5-9"): Balanced control</li>
+                  <li>✓ High bars (9.5-10"): Air tricks/leverage</li>
+                  <li>✓ Personal preference matters most</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Wheels -->
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title text-xl font-medium">
+            <div class="flex items-center gap-3">
+              <span class="badge badge-accent">Wheels</span>
+              <span>Rims, tires, and spokes</span>
+            </div>
+          </div>
+          <div class="collapse-content">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+              <div>
+                <h4 class="font-bold mb-2">Rims</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Rim type & spoke patterns</li>
+                  <li>• Full color customization</li>
+                  <li>• 20" standard size</li>
+                  <li>• Width variations</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Tires</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Tread patterns (street, park, all-terrain)</li>
+                  <li>• Width: 2.0" - 2.5"</li>
+                  <li>• Colored sidewalls available</li>
+                  <li>• Affects grip and speed</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Spokes</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Individual spoke colors!</li>
+                  <li>• Cross-lacing patterns</li>
+                  <li>• Spoke count options</li>
+                  <li>• Unique visual customization</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Drivetrain -->
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title text-xl font-medium">
+            <div class="flex items-center gap-3">
+              <span class="badge badge-warning">Drivetrain</span>
+              <span>Cranks, chain, and gearing</span>
+            </div>
+          </div>
+          <div class="collapse-content">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+              <div>
+                <h4 class="font-bold mb-2">Cranks</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Length: 170mm-175mm</li>
+                  <li>• Style: 2-piece, 3-piece</li>
+                  <li>• Sprocket size affects gearing</li>
+                  <li>• Color coordination</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Chain</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• <strong>Full color range!</strong></li>
+                  <li>• Unique feature of the game</li>
+                  <li>• Standard or half-link</li>
+                  <li>• Match to frame or contrast</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Gear Ratios</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• 25/9: Quick acceleration</li>
+                  <li>• 28/9: Balanced</li>
+                  <li>• 30/9+: Top speed focus</li>
+                  <li>• Match to playstyle</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pedals -->
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title text-xl font-medium">
+            <div class="flex items-center gap-3">
+              <span class="badge badge-info">Pedals</span>
+              <span>Grip and control</span>
+            </div>
+          </div>
+          <div class="collapse-content">
+            <div class="mt-4">
+              <ul class="text-sm space-y-2">
+                <li>• <strong>Pedal Type:</strong> Various platform styles and sizes</li>
+                <li>• <strong>Pin Configuration:</strong> Affects grip level</li>
+                <li>• <strong>Color Options:</strong> Full customization available</li>
+                <li>• <strong>Material:</strong> Plastic or metal appearance</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Seat & Post -->
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title text-xl font-medium">
+            <div class="flex items-center gap-3">
+              <span class="badge badge-success">Seat & Post</span>
+              <span>Comfort and style</span>
+            </div>
+          </div>
+          <div class="collapse-content">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div>
+                <h4 class="font-bold mb-2">Seat Options</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Slim, pivotal, or combo styles</li>
+                  <li>• Full color range</li>
+                  <li>• Different padding levels</li>
+                  <li>• Visual appeal priority</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Seat Post</h4>
+                <ul class="text-sm space-y-1">
+                  <li>• Adjustable height settings</li>
+                  <li>• Color coordination options</li>
+                  <li>• Integrated or separate clamp</li>
+                  <li>• Aesthetic choice mainly</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pegs -->
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title text-xl font-medium">
+            <div class="flex items-center gap-3">
+              <span class="badge badge-error">Pegs</span>
+              <span>Grinding essentials</span>
+            </div>
+          </div>
+          <div class="collapse-content">
+            <div class="mt-4">
+              <h4 class="font-bold mb-3">Peg Configuration</h4>
+              <ul class="text-sm space-y-2">
+                <li>• <strong>Setup Options:</strong> None, Front only, Back only, Full (4 pegs)</li>
+                <li>• <strong>Length:</strong> Short (4") to Long (4.5"+)</li>
+                <li>• <strong>Color:</strong> Match frame or create contrast</li>
+                <li>• <strong>Material:</strong> Plastic or steel appearance</li>
+                <li>• <strong>Impact:</strong> More pegs = more grind options but slightly heavier</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Color Schemes -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <Palette class="h-8 w-8 text-primary" />
+        Popular Color Schemes
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div class="card bg-gradient-to-br from-base-300 to-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-sm">Monochrome</h3>
+            <p class="text-xs opacity-80">All components in shades of one color</p>
+            <div class="badge badge-sm badge-outline mt-2">Sleek & Professional</div>
+          </div>
+        </div>
+        
+        <div class="card bg-gradient-to-br from-primary/20 to-secondary/20">
+          <div class="card-body">
+            <h3 class="card-title text-sm">Contrast</h3>
+            <p class="text-xs opacity-80">Frame and components in opposing colors</p>
+            <div class="badge badge-sm badge-primary mt-2">Bold & Visible</div>
+          </div>
+        </div>
+        
+        <div class="card bg-gradient-to-br from-accent/20 to-info/20">
+          <div class="card-body">
+            <h3 class="card-title text-sm">Gradient</h3>
+            <p class="text-xs opacity-80">Colors flow from front to back</p>
+            <div class="badge badge-sm badge-accent mt-2">Unique & Artistic</div>
+          </div>
+        </div>
+        
+        <div class="card bg-gradient-to-br from-neutral to-base-300">
+          <div class="card-body">
+            <h3 class="card-title text-sm">Classic</h3>
+            <p class="text-xs opacity-80">Black frame, chrome components</p>
+            <div class="badge badge-sm badge-neutral mt-2">Timeless</div>
+          </div>
+        </div>
+        
+        <div class="card bg-gradient-to-br from-warning/20 via-error/20 to-success/20">
+          <div class="card-body">
+            <h3 class="card-title text-sm">Wild</h3>
+            <p class="text-xs opacity-80">Maximum color variety</p>
+            <div class="badge badge-sm badge-warning mt-2">Expressive & Fun</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Build Tips -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <Lightbulb class="h-8 w-8 text-warning" />
+        Build Tips & Tricks
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {buildTips.map((tip) => (
+          <div class="alert alert-info">
+            <Star class="h-5 w-5" />
+            <span class="text-sm">{tip}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+    
+    <!-- Build Sharing -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Community Build Sharing</h2>
+      
+      <div class="card bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 border border-primary/20">
+        <div class="card-body text-center">
+          <Wrench class="h-16 w-16 mx-auto mb-4 text-primary" />
+          <h3 class="text-2xl font-bold mb-4">Coming Soon!</h3>
+          <p class="opacity-80 mb-6">
+            Share your custom bike builds with the community. Inspire others and discover unique configurations from players around the world.
+          </p>
+          <div class="flex gap-4 justify-center">
+            <a href="/official/" class="btn btn-primary">Join Discord</a>
+            <a href="/characters/" class="btn btn-outline">Customize Rider</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Pro Tips -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Pro Building Tips</h2>
+      
+      <div class="bg-base-200 rounded-2xl p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-bold text-xl mb-4 text-primary">Performance Optimization</h3>
+            <ul class="space-y-3 text-sm">
+              <li>✓ Test builds on different maps before committing</li>
+              <li>✓ Create separate builds for challenges vs free play</li>
+              <li>✓ Lighter builds = more responsive (air tricks)</li>
+              <li>✓ Heavier builds = more stable (grinds)</li>
+              <li>✓ Gear ratio impacts playstyle significantly</li>
+              <li>✓ Save multiple configurations</li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-bold text-xl mb-4 text-secondary">Aesthetic Tips</h3>
+            <ul class="space-y-3 text-sm">
+              <li>✓ Color customization is purely visual</li>
+              <li>✓ Chain color is a unique feature - use it!</li>
+              <li>✓ Match bike to rider for cohesive look</li>
+              <li>✓ Screenshot your favorite setups</li>
+              <li>✓ Experiment with unconventional colors</li>
+              <li>✓ Small details (spokes, chain) make big impact</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Related -->
+    <section>
+      <h2 class="text-3xl font-bold mb-6">Related Guides</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="/tier-list/" class="card bg-base-200 hover:bg-base-300 card-hover">
+          <div class="card-body">
+            <h3 class="card-title text-primary">Build Tier List</h3>
+            <p class="text-sm">See which builds rank highest</p>
+          </div>
+        </a>
+        
+        <a href="/characters/" class="card bg-base-200 hover:bg-base-300 card-hover">
+          <div class="card-body">
+            <h3 class="card-title text-secondary">Character Customization</h3>
+            <p class="text-sm">Match your rider to your bike</p>
+          </div>
+        </a>
+        
+        <a href="/guides/beginner-guide/" class="card bg-base-200 hover:bg-base-300 card-hover">
+          <div class="card-body">
+            <h3 class="card-title text-accent">Beginner's Guide</h3>
+            <p class="text-sm">Learn how builds affect gameplay</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>
+

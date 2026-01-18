@@ -1,0 +1,325 @@
+---
+import Layout from '../components/Layout.astro';
+import TierCard from '../components/TierCard.astro';
+import { Trophy, Zap, Map, Wrench } from 'lucide-astro';
+import tierData from '../data/tier-list.json';
+
+const { tierList, tiers, trickssTierList, mapsTierList } = tierData;
+---
+
+<Layout 
+  title="Tier List"
+  description="Complete tier list for Streetdog BMX - Best builds, tricks, and maps ranked by effectiveness and performance."
+  keywords={['streetdog bmx tier list', 'best bmx builds', 'best tricks streetdog bmx', 'streetdog bmx rankings']}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="breadcrumbs text-sm mb-4">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>Tier List</li>
+        </ul>
+      </div>
+      
+      <h1 class="text-5xl font-bold mb-4">
+        <span class="text-primary">Tier</span> List Rankings
+      </h1>
+      <p class="text-xl opacity-80 mb-6">
+        Community-driven rankings for builds, tricks, and maps based on effectiveness and performance
+      </p>
+      
+      <div class="flex flex-wrap gap-3 mb-6">
+        <div class="badge badge-lg">Version {tierList.version}</div>
+        <div class="badge badge-lg badge-primary">Updated {tierList.lastUpdated}</div>
+        <div class="badge badge-lg badge-outline">Community Verified</div>
+      </div>
+    </div>
+    
+    <!-- Quick Navigation -->
+    <div class="flex flex-wrap gap-4 mb-12">
+      <a href="#builds" class="btn btn-primary gap-2">
+        <Wrench class="h-4 w-4" />
+        Bike Builds
+      </a>
+      <a href="#tricks" class="btn btn-secondary gap-2">
+        <Zap class="h-4 w-4" />
+        Tricks
+      </a>
+      <a href="#maps" class="btn btn-accent gap-2">
+        <Map class="h-4 w-4" />
+        Maps
+      </a>
+    </div>
+    
+    <!-- Builds Tier List -->
+    <section id="builds" class="mb-16">
+      <div class="flex items-center gap-3 mb-8">
+        <Wrench class="h-10 w-10 text-primary" />
+        <div>
+          <h2 class="text-4xl font-bold">Bike Builds Tier List</h2>
+          <p class="opacity-70">Ranked by versatility, effectiveness, and performance across all content</p>
+        </div>
+      </div>
+      
+      <TierCard
+        tier="S"
+        label={tiers.S.label}
+        description={tiers.S.description}
+        color={tiers.S.color}
+        items={tiers.S.builds}
+      />
+      
+      <TierCard
+        tier="A"
+        label={tiers.A.label}
+        description={tiers.A.description}
+        color={tiers.A.color}
+        items={tiers.A.builds}
+      />
+      
+      <TierCard
+        tier="B"
+        label={tiers.B.label}
+        description={tiers.B.description}
+        color={tiers.B.color}
+        items={tiers.B.builds}
+      />
+      
+      <div class="alert alert-info mt-6">
+        <Trophy class="h-6 w-6" />
+        <div>
+          <h3 class="font-bold">Tier Explanation</h3>
+          <div class="text-sm">
+            <strong>S-Tier:</strong> Best overall - competitive must-haves. 
+            <strong>A-Tier:</strong> Excellent specialized choices. 
+            <strong>B-Tier:</strong> Viable but situational.
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-8 text-center">
+        <a href="/builds/" class="btn btn-primary btn-lg">View Detailed Build Guides</a>
+      </div>
+    </section>
+    
+    <div class="divider my-16"></div>
+    
+    <!-- Tricks Tier List -->
+    <section id="tricks" class="mb-16">
+      <div class="flex items-center gap-3 mb-8">
+        <Zap class="h-10 w-10 text-secondary" />
+        <div>
+          <h2 class="text-4xl font-bold">Tricks Tier List</h2>
+          <p class="opacity-70">Essential tricks ranked by scoring potential and combo utility</p>
+        </div>
+      </div>
+      
+      <TierCard
+        tier="S"
+        label={trickssTierList.S.label}
+        description={trickssTierList.S.description}
+        color="#ff6b35"
+        items={trickssTierList.S.tricks.map(t => ({
+          id: t.name.toLowerCase().replace(/\s+/g, '-'),
+          name: t.name,
+          reason: t.reason
+        }))}
+      />
+      
+      <TierCard
+        tier="A"
+        label={trickssTierList.A.label}
+        description={trickssTierList.A.description}
+        color="#f7931e"
+        items={trickssTierList.A.tricks.map(t => ({
+          id: t.name.toLowerCase().replace(/\s+/g, '-'),
+          name: t.name,
+          reason: t.reason
+        }))}
+      />
+      
+      <TierCard
+        tier="B"
+        label={trickssTierList.B.label}
+        description={trickssTierList.B.description}
+        color="#00d9ff"
+        items={trickssTierList.B.tricks.map(t => ({
+          id: t.name.toLowerCase().replace(/\s+/g, '-'),
+          name: t.name,
+          reason: t.reason
+        }))}
+      />
+      
+      <TierCard
+        tier="Expert"
+        label={trickssTierList.Expert.label}
+        description={trickssTierList.Expert.description}
+        color="#a855f7"
+        items={trickssTierList.Expert.tricks.map(t => ({
+          id: t.name.toLowerCase().replace(/\s+/g, '-'),
+          name: t.name,
+          reason: t.reason
+        }))}
+      />
+      
+      <div class="alert alert-warning mt-6">
+        <Zap class="h-6 w-6" />
+        <div>
+          <h3 class="font-bold">Trick Priority</h3>
+          <div class="text-sm">
+            Master S-Tier tricks first - they're essential for competitive play. A-Tier tricks round out your arsenal. B-Tier are situational. Expert tricks are high-risk, high-reward for advanced players only.
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-8 text-center">
+        <a href="/guides/tricks-combos/" class="btn btn-secondary btn-lg">Learn All Tricks & Combos</a>
+      </div>
+    </section>
+    
+    <div class="divider my-16"></div>
+    
+    <!-- Maps Tier List -->
+    <section id="maps" class="mb-16">
+      <div class="flex items-center gap-3 mb-8">
+        <Map class="h-10 w-10 text-accent" />
+        <div>
+          <h2 class="text-4xl font-bold">Maps Tier List</h2>
+          <p class="opacity-70">Maps ranked by content density, replayability, and overall enjoyment</p>
+        </div>
+      </div>
+      
+      <TierCard
+        tier="S"
+        label={mapsTierList.S.label}
+        description="Best maps for grinding, challenges, and high scores"
+        color="#ff6b35"
+        items={mapsTierList.S.maps.map(m => ({
+          id: m.name.toLowerCase().replace(/\s+/g, '-'),
+          name: m.name,
+          reason: m.reason
+        }))}
+      />
+      
+      <TierCard
+        tier="A"
+        label={mapsTierList.A.label}
+        description="Great maps with unique strengths"
+        color="#f7931e"
+        items={mapsTierList.A.maps.map(m => ({
+          id: m.name.toLowerCase().replace(/\s+/g, '-'),
+          name: m.name,
+          reason: m.reason
+        }))}
+      />
+      
+      <TierCard
+        tier="B"
+        label={mapsTierList.B.label}
+        description="Good for learning but limited endgame value"
+        color="#00d9ff"
+        items={mapsTierList.B.maps.map(m => ({
+          id: m.name.toLowerCase().replace(/\s+/g, '-'),
+          name: m.name,
+          reason: m.reason
+        }))}
+      />
+      
+      <div class="alert alert-info mt-6">
+        <Map class="h-6 w-6" />
+        <div>
+          <h3 class="font-bold">Map Recommendations</h3>
+          <div class="text-sm">
+            While Skate Park is B-Tier for experienced players, it's S-Tier for beginners! All maps have value depending on your skill level and goals. S-Tier maps simply offer the most content and replayability.
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-8 text-center">
+        <a href="/maps/" class="btn btn-accent btn-lg">Explore All Maps</a>
+      </div>
+    </section>
+    
+    <!-- Tier List Methodology -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6">Tier List Methodology</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-primary">Builds Criteria</h3>
+            <ul class="text-sm space-y-2">
+              <li>✓ Versatility across maps</li>
+              <li>✓ Challenge completion rate</li>
+              <li>✓ High-score potential</li>
+              <li>✓ Ease of use</li>
+              <li>✓ Community popularity</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-secondary">Tricks Criteria</h3>
+            <ul class="text-sm space-y-2">
+              <li>✓ Base point value</li>
+              <li>✓ Combo utility</li>
+              <li>✓ Consistency/reliability</li>
+              <li>✓ Learning curve</li>
+              <li>✓ Competitive usage rate</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-accent">Maps Criteria</h3>
+            <ul class="text-sm space-y-2">
+              <li>✓ Content density</li>
+              <li>✓ Challenge variety</li>
+              <li>✓ Hidden spots count</li>
+              <li>✓ Replayability</li>
+              <li>✓ Line opportunities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Community Input -->
+    <section class="bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 rounded-3xl p-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">Community-Driven Rankings</h2>
+      
+      <p class="text-center max-w-2xl mx-auto mb-6">
+        These tier lists are based on community feedback, competitive play data, and extensive testing. 
+        Rankings may change as the meta evolves and new strategies emerge.
+      </p>
+      
+      <div class="flex flex-wrap gap-4 justify-center">
+        <div class="stat bg-base-200 rounded-lg">
+          <div class="stat-title">Last Updated</div>
+          <div class="stat-value text-2xl text-primary">{tierList.lastUpdated}</div>
+        </div>
+        
+        <div class="stat bg-base-200 rounded-lg">
+          <div class="stat-title">Version</div>
+          <div class="stat-value text-2xl text-secondary">{tierList.version}</div>
+        </div>
+        
+        <div class="stat bg-base-200 rounded-lg">
+          <div class="stat-title">Categories</div>
+          <div class="stat-value text-2xl text-accent">3</div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-6">
+        <p class="text-sm opacity-70">
+          Disagree with rankings? Join the Discord to share your thoughts and contribute to future updates!
+        </p>
+        <a href="/official/" class="btn btn-outline btn-sm mt-4">Join Community</a>
+      </div>
+    </section>
+  </div>
+</Layout>
+

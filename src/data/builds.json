@@ -1,0 +1,341 @@
+{
+  "builds": [
+    {
+      "id": "all-rounder",
+      "name": "All-Rounder Build",
+      "tier": "A",
+      "purpose": "Balanced for all maps and challenges",
+      "difficulty": "Beginner",
+      "popularity": 95,
+      "components": {
+        "frame": {
+          "type": "Medium weight, neutral geometry",
+          "recommendation": "Balanced street/park frame"
+        },
+        "bars": {
+          "type": "Mid-height (8.5-9 inch rise)",
+          "recommendation": "Good control and comfort"
+        },
+        "tires": {
+          "type": "Medium width all-terrain",
+          "recommendation": "2.25-2.3 inch width"
+        },
+        "gearing": {
+          "type": "Balanced ratio (25/9 or 28/9)",
+          "recommendation": "Good for everything"
+        },
+        "pegs": {
+          "type": "Full setup (4 pegs)",
+          "recommendation": "Maximum grind options"
+        },
+        "seat": {
+          "type": "Mid-height pivotal",
+          "recommendation": "Comfortable and functional"
+        }
+      },
+      "bestFor": [
+        "Beginners learning the game",
+        "General play across all maps",
+        "Challenge completion",
+        "Players without specialization preference"
+      ],
+      "pros": [
+        "Versatile across all maps",
+        "Forgiving handling",
+        "Good learning platform",
+        "No major weaknesses"
+      ],
+      "cons": [
+        "No specialization benefits",
+        "Not optimal for specific challenges",
+        "Jack of all trades, master of none"
+      ],
+      "recommendedMaps": ["All maps"],
+      "skillLevel": "Beginner to Intermediate"
+    },
+    {
+      "id": "speed-demon",
+      "name": "Speed Demon Build",
+      "tier": "S",
+      "purpose": "Maximum speed for high score runs",
+      "difficulty": "Intermediate",
+      "popularity": 75,
+      "components": {
+        "frame": {
+          "type": "Lightweight, aggressive geometry",
+          "recommendation": "Race-inspired frame"
+        },
+        "bars": {
+          "type": "Low profile (7.5-8 inch rise)",
+          "recommendation": "Aerodynamic position"
+        },
+        "tires": {
+          "type": "Narrow street tires",
+          "recommendation": "2.0-2.1 inch width"
+        },
+        "gearing": {
+          "type": "Tall ratio (30/9 or 33/9)",
+          "recommendation": "Top speed priority"
+        },
+        "pegs": {
+          "type": "Minimal or none",
+          "recommendation": "Weight reduction"
+        },
+        "seat": {
+          "type": "Slim low-profile",
+          "recommendation": "Lightweight"
+        }
+      },
+      "bestFor": [
+        "High score attempts",
+        "Speed-based challenges",
+        "Long combo runs",
+        "Experienced players"
+      ],
+      "pros": [
+        "Maximum speed potential",
+        "Responsive handling",
+        "Great for score runs",
+        "Lightweight feel"
+      ],
+      "cons": [
+        "Less stable at high speeds",
+        "Harder to control",
+        "Limited grinding capability",
+        "Not beginner-friendly"
+      ],
+      "recommendedMaps": ["downtown-district", "urban-streets", "rooftop-run"],
+      "skillLevel": "Intermediate to Advanced"
+    },
+    {
+      "id": "grind-machine",
+      "name": "Grind Machine Build",
+      "tier": "A",
+      "purpose": "Optimized for rail and ledge tricks",
+      "difficulty": "Intermediate",
+      "popularity": 80,
+      "components": {
+        "frame": {
+          "type": "Sturdy mid-weight",
+          "recommendation": "Strong street frame"
+        },
+        "bars": {
+          "type": "Higher rise (9-9.5 inch)",
+          "recommendation": "Leverage for balance"
+        },
+        "tires": {
+          "type": "Medium width for stability",
+          "recommendation": "2.3-2.4 inch width"
+        },
+        "gearing": {
+          "type": "Medium ratio (28/9)",
+          "recommendation": "Control over speed"
+        },
+        "pegs": {
+          "type": "Full setup, longer length",
+          "recommendation": "4.5 inch pegs"
+        },
+        "seat": {
+          "type": "Standard pivotal",
+          "recommendation": "Good for positioning"
+        }
+      },
+      "bestFor": [
+        "Grind-focused challenges",
+        "Technical rail lines",
+        "Street riding",
+        "Players who love grinding"
+      ],
+      "pros": [
+        "Excellent grind stability",
+        "Good balance control",
+        "Perfect for rail sections",
+        "Versatile grind options"
+      ],
+      "cons": [
+        "Slower than speed builds",
+        "Heavier weight",
+        "Less air performance",
+        "Not ideal for big gaps"
+      ],
+      "recommendedMaps": ["urban-streets", "construction-zone", "downtown-district"],
+      "skillLevel": "Intermediate"
+    },
+    {
+      "id": "park-flow",
+      "name": "Park Flow Build",
+      "tier": "B",
+      "purpose": "Skate park and bowl riding optimization",
+      "difficulty": "Beginner-Intermediate",
+      "popularity": 65,
+      "components": {
+        "frame": {
+          "type": "Park-specific geometry",
+          "recommendation": "Shorter rear end"
+        },
+        "bars": {
+          "type": "Higher rise (9-10 inch)",
+          "recommendation": "Good for airs"
+        },
+        "tires": {
+          "type": "Wider for transition grip",
+          "recommendation": "2.4-2.5 inch width"
+        },
+        "gearing": {
+          "type": "Short ratio (25/9)",
+          "recommendation": "Quick acceleration"
+        },
+        "pegs": {
+          "type": "Optional (2 pegs)",
+          "recommendation": "Front or back only"
+        },
+        "seat": {
+          "type": "Mid-height pivotal",
+          "recommendation": "Comfortable for transitions"
+        }
+      },
+      "bestFor": [
+        "Skate park map",
+        "Bowl and transition riding",
+        "Air trick focus",
+        "Flow-oriented players"
+      ],
+      "pros": [
+        "Excellent in transitions",
+        "Great air control",
+        "Smooth flow",
+        "Quick acceleration in bowls"
+      ],
+      "cons": [
+        "Less effective on street",
+        "Limited grind capability",
+        "Not ideal for long rails",
+        "Specialized use case"
+      ],
+      "recommendedMaps": ["skate-park"],
+      "skillLevel": "Beginner to Intermediate"
+    },
+    {
+      "id": "street-tech",
+      "name": "Street Tech Build",
+      "tier": "S",
+      "purpose": "Technical street riding mastery",
+      "difficulty": "Advanced",
+      "popularity": 70,
+      "components": {
+        "frame": {
+          "type": "Responsive street geometry",
+          "recommendation": "Technical frame design"
+        },
+        "bars": {
+          "type": "Medium height (8.5-9 inch)",
+          "recommendation": "Precision control"
+        },
+        "tires": {
+          "type": "Street-specific tread",
+          "recommendation": "2.25 inch width"
+        },
+        "gearing": {
+          "type": "Balanced ratio (28/9)",
+          "recommendation": "Tricks and speed"
+        },
+        "pegs": {
+          "type": "Full setup",
+          "recommendation": "4 pegs, standard length"
+        },
+        "seat": {
+          "type": "Low pivotal",
+          "recommendation": "Out of the way"
+        }
+      },
+      "bestFor": [
+        "Urban street maps",
+        "Technical trick combinations",
+        "Wallrides and gaps",
+        "Experienced street riders"
+      ],
+      "pros": [
+        "Perfect street feel",
+        "Technical capability",
+        "Authentic handling",
+        "Great for combos"
+      ],
+      "cons": [
+        "Requires skill to use effectively",
+        "Less forgiving",
+        "Not beginner-friendly",
+        "Specialized for street"
+      ],
+      "recommendedMaps": ["urban-streets", "downtown-district", "secret-compound"],
+      "skillLevel": "Advanced to Expert"
+    },
+    {
+      "id": "air-master",
+      "name": "Air Master Build",
+      "tier": "A",
+      "purpose": "Maximum air trick potential",
+      "difficulty": "Intermediate",
+      "popularity": 60,
+      "components": {
+        "frame": {
+          "type": "Lightweight with responsive geometry",
+          "recommendation": "Air-focused frame"
+        },
+        "bars": {
+          "type": "High rise (9.5-10 inch)",
+          "recommendation": "Pull-up leverage"
+        },
+        "tires": {
+          "type": "Medium width",
+          "recommendation": "2.3 inch width"
+        },
+        "gearing": {
+          "type": "Balanced ratio (27/9)",
+          "recommendation": "Height and control"
+        },
+        "pegs": {
+          "type": "Light or none",
+          "recommendation": "Weight reduction"
+        },
+        "seat": {
+          "type": "Slim profile",
+          "recommendation": "Lightweight"
+        }
+      },
+      "bestFor": [
+        "Big air challenges",
+        "Flip and spin tricks",
+        "Rooftop gaps",
+        "Air-focused players"
+      ],
+      "pros": [
+        "Excellent air control",
+        "Easy to get height",
+        "Great for flips and spins",
+        "Lightweight"
+      ],
+      "cons": [
+        "Limited ground game",
+        "Less grind capability",
+        "Specialized purpose",
+        "Not versatile"
+      ],
+      "recommendedMaps": ["rooftop-run", "skate-park", "construction-zone"],
+      "skillLevel": "Intermediate to Advanced"
+    }
+  ],
+  "buildTips": [
+    "Test builds on different maps to find your preference",
+    "Adjust build based on challenge requirements",
+    "Color customization doesn't affect performance",
+    "Save multiple builds for different situations",
+    "Chain color is a unique customization feature",
+    "Match bike aesthetic to rider for cohesive look"
+  ],
+  "componentCategories": {
+    "performance": ["frame", "bars", "tires", "gearing"],
+    "style": ["frame color", "component colors", "chain color"],
+    "functional": ["pegs", "seat"]
+  }
+}
+

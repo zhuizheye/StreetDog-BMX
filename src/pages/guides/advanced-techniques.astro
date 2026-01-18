@@ -1,0 +1,613 @@
+---
+import Layout from '../../components/Layout.astro';
+import { Zap, Target, TrendingUp, Award, Eye } from 'lucide-astro';
+---
+
+<Layout 
+  title="Advanced Techniques"
+  description="Master advanced techniques in Streetdog BMX - Physics mechanics, line optimization, challenge strategies, and expert tips."
+  keywords={['streetdog bmx advanced guide', 'streetdog bmx expert tips', 'streetdog bmx pro strategies']}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="breadcrumbs text-sm mb-4">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/guides/">Guides</a></li>
+          <li>Advanced Techniques</li>
+        </ul>
+      </div>
+      
+      <div class="badge badge-error badge-lg mb-4">Expert Level</div>
+      
+      <h1 class="text-5xl font-bold mb-4">
+        Advanced <span class="text-primary">Techniques</span>
+      </h1>
+      <p class="text-xl opacity-80">
+        Expert-level strategies for mastering Streetdog BMX
+      </p>
+    </div>
+    
+    <div class="prose-custom max-w-none">
+      <!-- Physics-Based Mechanics -->
+      <section class="mb-12">
+        <h2 class="flex items-center gap-3">
+          <Zap class="h-8 w-8 text-primary" />
+          Physics-Based Mechanics
+        </h2>
+        
+        <h3>Pump System Mastery</h3>
+        <p>The pump mechanic is crucial for speed and height control:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h4 class="card-title text-primary">Transition Pumping</h4>
+              <ul class="space-y-2 text-sm">
+                <li><strong>Entering:</strong> Pull down on left stick as you approach bottom</li>
+                <li><strong>Exiting:</strong> Push up as you reach top of transition</li>
+                <li><strong>Result:</strong> Gain speed and height with each pump</li>
+                <li><strong>Pro Tip:</strong> Chain pumps in bowls for infinite speed gain</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h4 class="card-title text-secondary">Flat Pumping</h4>
+              <ul class="space-y-2 text-sm">
+                <li><strong>Technique:</strong> Rhythmic up-down stick movement</li>
+                <li><strong>Use Case:</strong> Gaining speed on flat ground</li>
+                <li><strong>Advanced:</strong> Combine with small hops for extra speed</li>
+                <li><strong>Pro Tip:</strong> Useful for reaching distant gaps</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h4 class="card-title text-accent">Pre-Jump Pump</h4>
+              <ul class="space-y-2 text-sm">
+                <li><strong>Input:</strong> Pull down then push up before hop</li>
+                <li><strong>Result:</strong> Maximum hop height</li>
+                <li><strong>Critical For:</strong> Big gaps and high airs</li>
+                <li><strong>Practice:</strong> Try in Rooftop Run map</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h4 class="card-title text-warning">Air Pumping</h4>
+              <ul class="space-y-2 text-sm">
+                <li><strong>While Airborne:</strong> Adjust height mid-flight</li>
+                <li><strong>Pull Down:</strong> Drop faster (for gaps)</li>
+                <li><strong>Push Up:</strong> Extend airtime slightly</li>
+                <li><strong>Mastery:</strong> Fine-tune landings</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <h3>Weight Transfer System</h3>
+        <div class="bg-base-200 rounded-2xl p-6 my-6">
+          <p class="mb-4">Use left stick for rider weight shifting - affects multiple aspects:</p>
+          <ul class="space-y-2">
+            <li><strong>Landing Stability:</strong> Lean forward for downslope landings, backward for upslope</li>
+            <li><strong>Grind Balance:</strong> Shift weight to maintain rail position</li>
+            <li><strong>Manual Duration:</strong> Micro-adjustments keep manual going</li>
+            <li><strong>Air Control:</strong> Affects rotation speed and direction</li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- Advanced Line Building -->
+      <section class="mb-12">
+        <h2 class="flex items-center gap-3">
+          <Target class="h-8 w-8 text-secondary" />
+          Advanced Line Building
+        </h2>
+        
+        <h3>Map Flow Analysis</h3>
+        <p>Expert players analyze maps systematically:</p>
+        
+        <div class="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-2xl p-6 my-6">
+          <ol class="space-y-4">
+            <li class="flex gap-4">
+              <span class="badge badge-secondary">1</span>
+              <div>
+                <strong>Identify High Points:</strong> Start from elevated positions for maximum combo potential
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="badge badge-secondary">2</span>
+              <div>
+                <strong>Map Grind Rails:</strong> Note all rail positions and connections
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="badge badge-secondary">3</span>
+              <div>
+                <strong>Locate Gap Opportunities:</strong> Gaps add significant multiplier bonuses
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="badge badge-secondary">4</span>
+              <div>
+                <strong>Find Wallride Connections:</strong> Wallrides extend combos uniquely
+              </div>
+            </li>
+            <li class="flex gap-4">
+              <span class="badge badge-secondary">5</span>
+              <div>
+                <strong>Note Transfer Possibilities:</strong> Transfers between sections maintain combo
+              </div>
+            </li>
+          </ol>
+        </div>
+        
+        <h3>Optimal Routing Principles</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h4 class="font-bold text-primary mb-3">Route Planning</h4>
+              <ul class="text-sm space-y-2">
+                <li>✓ Chain natural terrain features</li>
+                <li>✓ Minimize ground time between tricks</li>
+                <li>✓ Utilize elevation changes for speed</li>
+                <li>✓ Incorporate hidden spots for bonuses</li>
+                <li>✓ Plan escape routes for failed tricks</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h4 class="font-bold text-secondary mb-3">Line Efficiency</h4>
+              <ul class="text-sm space-y-2">
+                <li>✓ One continuous flow (no stopping)</li>
+                <li>✓ Speed management throughout</li>
+                <li>✓ Strategic manual placement</li>
+                <li>✓ Grind chains for extension</li>
+                <li>✓ End with high-value trick</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Technical Skills -->
+      <section class="mb-12">
+        <h2 class="flex items-center gap-3">
+          <Award class="h-8 w-8 text-accent" />
+          Technical Skills Mastery
+        </h2>
+        
+        <h3>Precision Landing</h3>
+        <div class="bg-base-200 rounded-2xl p-6 my-6">
+          <p class="mb-4">Landing is where most combos fail. Master these techniques:</p>
+          
+          <div class="space-y-4">
+            <div>
+              <h4 class="font-semibold text-primary mb-2">Rotation Adjustment</h4>
+              <p class="text-sm">Use weight transfer mid-air to fine-tune rotation. If under-rotating, lean forward slightly. If over-rotating, lean back.</p>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-secondary mb-2">Speed Compensation</h4>
+              <p class="text-sm">Higher speed = more rotation. At high speeds, use less stick input for tricks. At low speeds, commit fully to rotations.</p>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-accent mb-2">Manual Continuation</h4>
+              <p class="text-sm">Input manual button 0.1 seconds BEFORE landing for seamless transition. Too early = failed manual. Too late = combo breaks.</p>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-warning mb-2">Grind Approach</h4>
+              <p class="text-sm">Approach rails at 20-30 degree angle for optimal grind entry. Perpendicular approaches often fail. Parallel approaches slide off.</p>
+            </div>
+          </div>
+        </div>
+        
+        <h3>Grind Extensions</h3>
+        <p>Long grinds rack up points but require advanced balance:</p>
+        <ul class="my-4">
+          <li><strong>Balance Adjustments:</strong> Micro-movements with left stick keep you on rail</li>
+          <li><strong>Switch Grind Types:</strong> Change grind mid-rail by adjusting position (advanced!)</li>
+          <li><strong>Exit Timing:</strong> Exit into manual at rail end, don't wait for automatic exit</li>
+          <li><strong>Rail Transfers:</strong> Jump between parallel rails to extend grind combos</li>
+        </ul>
+        
+        <h3>Air Control Mastery</h3>
+        <div class="alert alert-info my-6">
+          <Eye class="h-6 w-6" />
+          <div>
+            <h4 class="font-bold">Expert Technique</h4>
+            <div class="text-sm">You can "style" tricks by holding inputs longer or combining multiple stick directions. This doesn't change points but improves visual flair and can help with rotation timing.</div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Challenge Optimization -->
+      <section class="mb-12">
+        <h2 class="flex items-center gap-3">
+          <TrendingUp class="h-8 w-8 text-warning" />
+          Challenge Optimization (270+ Challenges)
+        </h2>
+        
+        <p>With 270+ challenges, efficiency is key:</p>
+        
+        <h3>Challenge Categories & Strategies</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
+          <div class="card bg-gradient-to-br from-primary/20 to-primary/5">
+            <div class="card-body">
+              <h4 class="card-title text-sm">Trick Challenges</h4>
+              <p class="text-xs opacity-80 mb-2">Perform specific tricks</p>
+              <ul class="text-xs space-y-1">
+                <li>✓ Practice trick in isolation first</li>
+                <li>✓ Find ideal spot for setup</li>
+                <li>✓ Multiple attempts per run</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-secondary/20 to-secondary/5">
+            <div class="card-body">
+              <h4 class="card-title text-sm">Combo Challenges</h4>
+              <p class="text-xs opacity-80 mb-2">Hit score thresholds</p>
+              <ul class="text-xs space-y-1">
+                <li>✓ Use high-value trick combos</li>
+                <li>✓ Maximize multipliers</li>
+                <li>✓ Find special spots</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-accent/20 to-accent/5">
+            <div class="card-body">
+              <h4 class="card-title text-sm">Exploration</h4>
+              <p class="text-xs opacity-80 mb-2">Discover hidden spots</p>
+              <ul class="text-xs space-y-1">
+                <li>✓ Check every corner</li>
+                <li>✓ Look up and down</li>
+                <li>✓ Try "impossible" gaps</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-warning/20 to-warning/5">
+            <div class="card-body">
+              <h4 class="card-title text-sm">Technical</h4>
+              <p class="text-xs opacity-80 mb-2">Precision requirements</p>
+              <ul class="text-xs space-y-1">
+                <li>✓ Slow down and focus</li>
+                <li>✓ Practice exact execution</li>
+                <li>✓ Use custom bike if needed</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-error/20 to-error/5">
+            <div class="card-body">
+              <h4 class="card-title text-sm">Line Challenges</h4>
+              <p class="text-xs opacity-80 mb-2">Specific route completion</p>
+              <ul class="text-xs space-y-1">
+                <li>✓ Memorize exact path</li>
+                <li>✓ Practice sections separately</li>
+                <li>✓ String together when ready</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-info/20 to-info/5">
+            <div class="card-body">
+              <h4 class="card-title text-sm">Time Trials</h4>
+              <p class="text-xs opacity-80 mb-2">Speed-based challenges</p>
+              <ul class="text-xs space-y-1">
+                <li>✓ Optimize route for speed</li>
+                <li>✓ Minimize air time</li>
+                <li>✓ Use pump constantly</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <h3>Challenge Completion Tips</h3>
+        <ul class="my-4">
+          <li>📋 <strong>Group Similar Challenges:</strong> Complete multiple trick challenges in one session</li>
+          <li>🚲 <strong>Custom Bike Setups:</strong> Use specialized builds for specific challenge types</li>
+          <li>📍 <strong>Learn Spawn Locations:</strong> Know where challenges activate to plan routes</li>
+          <li>🎥 <strong>Replay Mode:</strong> Study failed attempts to understand mistakes</li>
+          <li>🎯 <strong>Consistency > Perfection:</strong> Reliable completion beats lucky attempts</li>
+        </ul>
+      </section>
+      
+      <!-- Replay System -->
+      <section class="mb-12">
+        <h2>Replay System as Learning Tool</h2>
+        
+        <p>The replay editor isn't just for sharing - it's a masterclass in self-improvement:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Analyze Failed Attempts</h3>
+              <ul class="text-sm space-y-2">
+                <li>✓ See exact rotation at landing</li>
+                <li>✓ Identify speed issues</li>
+                <li>✓ Spot balance problems</li>
+                <li>✓ Learn from mistakes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-secondary">Study Successful Runs</h3>
+              <ul class="text-sm space-y-2">
+                <li>✓ Review what worked</li>
+                <li>✓ Note timing of inputs</li>
+                <li>✓ Memorize routes</li>
+                <li>✓ Replicate success</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-accent">Discover Hidden Shortcuts</h3>
+              <ul class="text-sm space-y-2">
+                <li>✓ Different camera angles reveal paths</li>
+                <li>✓ Slow-motion shows opportunities</li>
+                <li>✓ Find alternative routes</li>
+                <li>✓ Spot secret areas</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-warning">Perfect Combo Timing</h3>
+              <ul class="text-sm space-y-2">
+                <li>✓ Frame-by-frame analysis</li>
+                <li>✓ Optimize trick sequences</li>
+                <li>✓ Improve transition timing</li>
+                <li>✓ Maximize efficiency</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Score Maximization -->
+      <section class="mb-12">
+        <h2>Score Maximization Strategies</h2>
+        
+        <h3>Multiplier Management</h3>
+        <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-6 my-6">
+          <p class="mb-4"><strong>Goal:</strong> Maintain the highest possible multiplier for as long as possible.</p>
+          
+          <div class="space-y-4">
+            <div>
+              <h4 class="font-semibold mb-2">Extend Combos Longer</h4>
+              <p class="text-sm">Every trick adds to multiplier. A 20-trick combo at 5x multiplier beats a 10-trick combo at 8x.</p>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold mb-2">Integrate High-Value Spots</h4>
+              <p class="text-sm">Special spots give +1.0x multiplier. Plan routes through these areas.</p>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold mb-2">Chain Unique Tricks</h4>
+              <p class="text-sm">Every 5 unique tricks = +0.5x variety bonus. Avoid repeating moves.</p>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold mb-2">Use Transfer Bonuses</h4>
+              <p class="text-sm">Transfers between ramps/sections add points AND maintain combo.</p>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold mb-2">Exploit Special Zones</h4>
+              <p class="text-sm">Hidden areas often have permanent multiplier boosts. Find them all!</p>
+            </div>
+          </div>
+        </div>
+        
+        <h3>High-Score Run Structure</h3>
+        <div class="bg-base-200 rounded-2xl p-6 my-6">
+          <ol class="space-y-3">
+            <li><strong>1. Route Planning (5 min):</strong> Walk through intended path, noting all spots</li>
+            <li><strong>2. Section Practice (20 min):</strong> Master each section individually</li>
+            <li><strong>3. Trick Selection (5 min):</strong> Choose 15-20 unique tricks for variety bonus</li>
+            <li><strong>4. Bail Recovery (10 min):</strong> Practice recovering from common failure points</li>
+            <li><strong>5. Full Run Attempts (20 min):</strong> String everything together</li>
+            <li><strong>6. Optimization (ongoing):</strong> Refine timing, add tricks, improve flow</li>
+          </ol>
+        </div>
+      </section>
+      
+      <!-- Map-Specific Techniques -->
+      <section class="mb-12">
+        <h2>Map-Specific Advanced Techniques</h2>
+        
+        <div class="space-y-4">
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="checkbox" />
+            <div class="collapse-title text-xl font-medium">
+              The Skate Park - Flow Mastery
+            </div>
+            <div class="collapse-content">
+              <ul class="text-sm space-y-2">
+                <li>✓ Use bowl chains for infinite combos</li>
+                <li>✓ Figure-8 patterns maintain speed</li>
+                <li>✓ Coping grinds connect bowl sections</li>
+                <li>✓ Perfect for practicing pump system</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="checkbox" />
+            <div class="collapse-title text-xl font-medium">
+              Rooftop Run - Gap Management
+            </div>
+            <div class="collapse-content">
+              <ul class="text-sm space-y-2">
+                <li>✓ Speed calculation crucial for gaps</li>
+                <li>✓ Height advantage for combo starts</li>
+                <li>✓ Risk vs reward assessment required</li>
+                <li>✓ Bail recovery spots identified</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="checkbox" />
+            <div class="collapse-title text-xl font-medium">
+              Construction Zone - Vertical Exploitation
+            </div>
+            <div class="collapse-content">
+              <ul class="text-sm space-y-2">
+                <li>✓ Scaffolding rails for long grinds</li>
+                <li>✓ Multi-level transfers extend combos</li>
+                <li>✓ Elevator shafts as shortcuts</li>
+                <li>✓ Crane areas for unique tricks</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="collapse collapse-arrow bg-base-200">
+            <input type="checkbox" />
+            <div class="collapse-title text-xl font-medium">
+              Downtown District - Marathon Routing
+            </div>
+            <div class="collapse-content">
+              <ul class="text-sm space-y-2">
+                <li>✓ Plan 30+ second combo routes</li>
+                <li>✓ District-to-district transitions</li>
+                <li>✓ Memorize landmark positions</li>
+                <li>✓ Escape routes for failed sections</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Customization for Performance -->
+      <section class="mb-12">
+        <h2>Customization for Performance</h2>
+        
+        <p>While cosmetic, bike setup affects handling and feel:</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Weight Distribution</h3>
+              <p class="text-sm mb-3">Heavier builds = more stable, slower response. Lighter = twitchy, faster.</p>
+              <ul class="text-sm space-y-1">
+                <li>• Heavy: Better for grinds</li>
+                <li>• Light: Better for airs</li>
+                <li>• Medium: Best all-around</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-secondary">Gear Ratios</h3>
+              <p class="text-sm mb-3">Affects top speed vs acceleration trade-off.</p>
+              <ul class="text-sm space-y-1">
+                <li>• Tall ratio: Speed focus</li>
+                <li>• Short ratio: Quick acceleration</li>
+                <li>• Test per map type</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="alert alert-success">
+          <Award class="h-6 w-6" />
+          <div>
+            <h4 class="font-bold">Pro Tip</h4>
+            <div class="text-sm">Create and save multiple bike builds for different maps and challenge types. Speed build for score runs, grind build for rail challenges, park build for bowls.</div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Practice Routines -->
+      <section class="mb-12">
+        <h2>Advanced Practice Routines</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="card bg-gradient-to-br from-success/20 to-success/5 border border-success/30">
+            <div class="card-body">
+              <h3 class="card-title text-success">Daily Warm-up (15 min)</h3>
+              <ol class="text-sm space-y-2">
+                <li>1. 5 min free ride</li>
+                <li>2. 5 min combo practice</li>
+                <li>3. 5 min challenge attempts</li>
+              </ol>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-warning/20 to-warning/5 border border-warning/30">
+            <div class="card-body">
+              <h3 class="card-title text-warning">Skill Development (30 min)</h3>
+              <ol class="text-sm space-y-2">
+                <li>1. Focus on one trick type</li>
+                <li>2. Practice specific map section</li>
+                <li>3. Attempt high-score runs</li>
+              </ol>
+            </div>
+          </div>
+          
+          <div class="card bg-gradient-to-br from-error/20 to-error/5 border border-error/30">
+            <div class="card-body">
+              <h3 class="card-title text-error">Challenge Grind (60 min)</h3>
+              <ol class="text-sm space-y-2">
+                <li>1. Target 5-10 challenges</li>
+                <li>2. Master required techniques</li>
+                <li>3. Persist until completion</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Final Tips -->
+      <section>
+        <h2>Final Expert Tips</h2>
+        
+        <div class="bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10 rounded-3xl p-8">
+          <ul class="space-y-3">
+            <li class="flex gap-3">
+              <span class="text-primary">▸</span>
+              <span><strong>Never stop learning:</strong> Even 100+ hours in, new techniques emerge</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-secondary">▸</span>
+              <span><strong>Watch community content:</strong> YouTube/Twitch for pro strategies</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent">▸</span>
+              <span><strong>Join Discord:</strong> Share techniques, get tips, stay updated</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-warning">▸</span>
+              <span><strong>Experiment constantly:</strong> Best discoveries come from trying "impossible" things</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-error">▸</span>
+              <span><strong>Have fun:</strong> Mastery comes from enjoyment, not grinding</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>
+

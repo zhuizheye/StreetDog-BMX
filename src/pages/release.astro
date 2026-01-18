@@ -1,0 +1,497 @@
+---
+import Layout from '../components/Layout.astro';
+import { Calendar, Clock, Download, CheckCircle, AlertCircle, ExternalLink } from 'lucide-astro';
+---
+
+<Layout 
+  title="Release Information"
+  description="Streetdog BMX release date, platforms, early access info, and launch details - Everything you need to know about the game's release."
+  keywords={['streetdog bmx release date', 'when is streetdog bmx coming out', 'streetdog bmx platforms', 'early access']}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="breadcrumbs text-sm mb-4">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>Release Information</li>
+        </ul>
+      </div>
+      
+      <h1 class="text-5xl font-bold mb-4">
+        Release <span class="text-primary">Information</span>
+      </h1>
+      <p class="text-xl opacity-80">
+        Everything you need to know about Streetdog BMX's release
+      </p>
+    </div>
+    
+    <!-- Current Status -->
+    <section class="mb-16">
+      <div class="card bg-gradient-to-br from-primary/20 to-secondary/20 border-2 border-primary">
+        <div class="card-body text-center">
+          <div class="badge badge-success badge-lg mb-4">NOW AVAILABLE</div>
+          <h2 class="text-4xl font-bold mb-4">Streetdog BMX is OUT NOW!</h2>
+          <p class="text-xl opacity-80 mb-6">
+            The game has officially launched and is available on all platforms
+          </p>
+          
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="#platforms" class="btn btn-primary btn-lg gap-2">
+              <Download class="h-5 w-5" />
+              View Platforms
+            </a>
+            <a href="/official/" class="btn btn-outline btn-lg gap-2">
+              <ExternalLink class="h-5 w-5" />
+              Official Links
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Release Timeline -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <Calendar class="h-8 w-8 text-primary" />
+        Release Timeline
+      </h2>
+      
+      <div class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact">
+        <div class="timeline-start">
+          <div class="badge badge-success">COMPLETED</div>
+        </div>
+        <div class="timeline-middle">
+          <CheckCircle class="h-5 w-5 text-success" />
+        </div>
+        <div class="timeline-end timeline-box bg-base-200">
+          <div class="font-bold">Early Development</div>
+          <div class="text-sm opacity-70">2021-2022</div>
+          <p class="text-sm mt-2">Project conception and initial prototyping by BMX enthusiasts</p>
+        </div>
+        <hr class="bg-success" />
+        
+        <div class="timeline-start">
+          <div class="badge badge-success">COMPLETED</div>
+        </div>
+        <div class="timeline-middle">
+          <CheckCircle class="h-5 w-5 text-success" />
+        </div>
+        <div class="timeline-end timeline-box bg-base-200">
+          <div class="font-bold">Alpha Testing</div>
+          <div class="text-sm opacity-70">2023</div>
+          <p class="text-sm mt-2">Closed alpha with core community feedback</p>
+        </div>
+        <hr class="bg-success" />
+        
+        <div class="timeline-start">
+          <div class="badge badge-success">COMPLETED</div>
+        </div>
+        <div class="timeline-middle">
+          <CheckCircle class="h-5 w-5 text-success" />
+        </div>
+        <div class="timeline-end timeline-box bg-base-200">
+          <div class="font-bold">Beta Release</div>
+          <div class="text-sm opacity-70">Early 2024</div>
+          <p class="text-sm mt-2">Open beta with expanded features and map testing</p>
+        </div>
+        <hr class="bg-success" />
+        
+        <div class="timeline-start">
+          <div class="badge badge-success">COMPLETED</div>
+        </div>
+        <div class="timeline-middle">
+          <CheckCircle class="h-5 w-5 text-success" />
+        </div>
+        <div class="timeline-end timeline-box bg-primary text-primary-content">
+          <div class="font-bold text-lg">Official Launch</div>
+          <div class="text-sm">2024</div>
+          <p class="text-sm mt-2">Full release across all platforms with complete feature set</p>
+        </div>
+        <hr class="bg-primary" />
+        
+        <div class="timeline-start">
+          <div class="badge badge-info">ONGOING</div>
+        </div>
+        <div class="timeline-middle">
+          <Clock class="h-5 w-5 text-info" />
+        </div>
+        <div class="timeline-end timeline-box bg-base-200">
+          <div class="font-bold">Post-Launch Support</div>
+          <div class="text-sm opacity-70">2024-Present</div>
+          <p class="text-sm mt-2">Regular updates, new content, community events, and ongoing improvements</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Platforms -->
+    <section id="platforms" class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <Download class="h-8 w-8 text-secondary" />
+        Available Platforms
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- PC/Steam -->
+        <div class="card bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/30">
+          <div class="card-body">
+            <div class="badge badge-success mb-3">AVAILABLE</div>
+            <h3 class="card-title text-primary">PC (Steam)</h3>
+            <p class="text-sm opacity-80 mb-4">Windows, Mac, Linux</p>
+            <ul class="text-xs space-y-1 mb-4">
+              <li>✓ Full feature support</li>
+              <li>✓ Steam Workshop integration</li>
+              <li>✓ Controller & keyboard support</li>
+              <li>✓ Steam Achievements</li>
+            </ul>
+            <a href="/official/" class="btn btn-primary btn-sm mt-auto">Get on Steam</a>
+          </div>
+        </div>
+        
+        <!-- PlayStation -->
+        <div class="card bg-gradient-to-br from-secondary/20 to-secondary/5 border border-secondary/30">
+          <div class="card-body">
+            <div class="badge badge-success mb-3">AVAILABLE</div>
+            <h3 class="card-title text-secondary">PlayStation</h3>
+            <p class="text-sm opacity-80 mb-4">PS4 & PS5</p>
+            <ul class="text-xs space-y-1 mb-4">
+              <li>✓ DualSense features (PS5)</li>
+              <li>✓ PlayStation Trophies</li>
+              <li>✓ Cross-gen compatible</li>
+              <li>✓ Performance mode</li>
+            </ul>
+            <a href="/official/" class="btn btn-secondary btn-sm mt-auto">PlayStation Store</a>
+          </div>
+        </div>
+        
+        <!-- Xbox -->
+        <div class="card bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/30">
+          <div class="card-body">
+            <div class="badge badge-success mb-3">AVAILABLE</div>
+            <h3 class="card-title text-accent">Xbox</h3>
+            <p class="text-sm opacity-80 mb-4">Xbox One & Series X|S</p>
+            <ul class="text-xs space-y-1 mb-4">
+              <li>✓ Xbox Game Pass</li>
+              <li>✓ Xbox Achievements</li>
+              <li>✓ Smart Delivery</li>
+              <li>✓ Quick Resume</li>
+            </ul>
+            <a href="/official/" class="btn btn-accent btn-sm mt-auto">Xbox Store</a>
+          </div>
+        </div>
+        
+        <!-- Nintendo Switch -->
+        <div class="card bg-gradient-to-br from-error/20 to-error/5 border border-error/30">
+          <div class="card-body">
+            <div class="badge badge-success mb-3">AVAILABLE</div>
+            <h3 class="card-title text-error">Nintendo Switch</h3>
+            <p class="text-sm opacity-80 mb-4">Handheld & Docked</p>
+            <ul class="text-xs space-y-1 mb-4">
+              <li>✓ Portable play optimized</li>
+              <li>✓ HD Rumble support</li>
+              <li>✓ 30/60 FPS modes</li>
+              <li>✓ Touch controls menu</li>
+            </ul>
+            <a href="/official/" class="btn btn-error btn-sm mt-auto">eShop</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="alert alert-info mt-6">
+        <AlertCircle class="h-6 w-6" />
+        <div>
+          <h3 class="font-bold">Cross-Platform Play</h3>
+          <div class="text-sm">Full cross-platform multiplayer and leaderboard support across all platforms. Play with friends regardless of their platform!</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- System Requirements -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">PC System Requirements</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Minimum -->
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-warning mb-4">Minimum Requirements</h3>
+            <div class="space-y-3 text-sm">
+              <div>
+                <strong class="text-primary">OS:</strong> Windows 10 (64-bit)
+              </div>
+              <div>
+                <strong class="text-primary">Processor:</strong> Intel Core i5-4460 or AMD equivalent
+              </div>
+              <div>
+                <strong class="text-primary">Memory:</strong> 8 GB RAM
+              </div>
+              <div>
+                <strong class="text-primary">Graphics:</strong> NVIDIA GTX 760 or AMD R9 280
+              </div>
+              <div>
+                <strong class="text-primary">DirectX:</strong> Version 11
+              </div>
+              <div>
+                <strong class="text-primary">Storage:</strong> 15 GB available space
+              </div>
+              <div>
+                <strong class="text-primary">Additional:</strong> Controller recommended
+              </div>
+            </div>
+            <div class="badge badge-warning mt-4">30 FPS @ 1080p Low</div>
+          </div>
+        </div>
+        
+        <!-- Recommended -->
+        <div class="card bg-gradient-to-br from-success/20 to-success/5 border border-success/30">
+          <div class="card-body">
+            <h3 class="card-title text-success mb-4">Recommended Requirements</h3>
+            <div class="space-y-3 text-sm">
+              <div>
+                <strong class="text-primary">OS:</strong> Windows 10/11 (64-bit)
+              </div>
+              <div>
+                <strong class="text-primary">Processor:</strong> Intel Core i7-7700K or AMD Ryzen 5 2600
+              </div>
+              <div>
+                <strong class="text-primary">Memory:</strong> 16 GB RAM
+              </div>
+              <div>
+                <strong class="text-primary">Graphics:</strong> NVIDIA GTX 1060 6GB or AMD RX 580
+              </div>
+              <div>
+                <strong class="text-primary">DirectX:</strong> Version 12
+              </div>
+              <div>
+                <strong class="text-primary">Storage:</strong> 15 GB SSD
+              </div>
+              <div>
+                <strong class="text-primary">Additional:</strong> Xbox/PlayStation controller
+              </div>
+            </div>
+            <div class="badge badge-success mt-4">60+ FPS @ 1080p High</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Launch Features -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Launch Features</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <CheckCircle class="h-6 w-6 text-success mb-2" />
+            <h3 class="font-bold">6 Massive Maps</h3>
+            <p class="text-sm opacity-80">Handcrafted environments with unique challenges</p>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <CheckCircle class="h-6 w-6 text-success mb-2" />
+            <h3 class="font-bold">270+ Challenges</h3>
+            <p class="text-sm opacity-80">Extensive progression system</p>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <CheckCircle class="h-6 w-6 text-success mb-2" />
+            <h3 class="font-bold">Deep Customization</h3>
+            <p class="text-sm opacity-80">Rider and bike personalization</p>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <CheckCircle class="h-6 w-6 text-success mb-2" />
+            <h3 class="font-bold">Replay Editor</h3>
+            <p class="text-sm opacity-80">Create and share epic clips</p>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <CheckCircle class="h-6 w-6 text-success mb-2" />
+            <h3 class="font-bold">Global Leaderboards</h3>
+            <p class="text-sm opacity-80">Compete worldwide</p>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <CheckCircle class="h-6 w-6 text-success mb-2" />
+            <h3 class="font-bold">Cross-Platform</h3>
+            <p class="text-sm opacity-80">Play with anyone, anywhere</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Post-Launch Roadmap -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Post-Launch Content</h2>
+      
+      <div class="alert alert-info mb-6">
+        <Clock class="h-6 w-6" />
+        <div>
+          <h3 class="font-bold">Ongoing Development</h3>
+          <div class="text-sm">The developers are committed to regular updates, new content drops, and community-requested features.</div>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-primary">Confirmed Updates</h3>
+            <ul class="text-sm space-y-2">
+              <li>✓ Regular bug fixes and optimizations</li>
+              <li>✓ Balance adjustments based on feedback</li>
+              <li>✓ Quality of life improvements</li>
+              <li>✓ Performance enhancements</li>
+              <li>✓ Community event support</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-secondary">Potential Future Content</h3>
+            <ul class="text-sm space-y-2">
+              <li>• New maps and locations</li>
+              <li>• Additional customization options</li>
+              <li>• Expanded challenge system</li>
+              <li>• New game modes</li>
+              <li>• Community-created content support</li>
+            </ul>
+            <div class="text-xs opacity-60 mt-3">Subject to change based on development priorities</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Pricing -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Pricing Information</h2>
+      
+      <div class="card bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20">
+        <div class="card-body text-center">
+          <h3 class="text-2xl font-bold mb-4">Standard Edition</h3>
+          <div class="text-5xl font-bold text-primary mb-2">$19.99</div>
+          <p class="text-sm opacity-70 mb-6">USD / One-time purchase</p>
+          
+          <div class="max-w-md mx-auto text-left mb-6">
+            <h4 class="font-bold mb-3">Includes:</h4>
+            <ul class="text-sm space-y-2">
+              <li>✓ Full game access</li>
+              <li>✓ All 6 maps</li>
+              <li>✓ 270+ challenges</li>
+              <li>✓ Complete customization system</li>
+              <li>✓ Replay editor</li>
+              <li>✓ Online leaderboards</li>
+              <li>✓ All future updates</li>
+            </ul>
+          </div>
+          
+          <div class="alert alert-success">
+            <CheckCircle class="h-6 w-6" />
+            <div class="text-sm">
+              <strong>No microtransactions!</strong> All content is included with the base game.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Release FAQ</h2>
+      
+      <div class="space-y-4">
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title font-medium">
+            Is the game available now?
+          </div>
+          <div class="collapse-content">
+            <p>Yes! Streetdog BMX is fully released and available on all platforms: PC (Steam), PlayStation 4/5, Xbox One/Series X|S, and Nintendo Switch.</p>
+          </div>
+        </div>
+        
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title font-medium">
+            Does it support cross-platform play?
+          </div>
+          <div class="collapse-content">
+            <p>Yes, full cross-platform multiplayer and leaderboard support is available across all platforms. You can compete with players regardless of their platform.</p>
+          </div>
+        </div>
+        
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title font-medium">
+            Are there any microtransactions?
+          </div>
+          <div class="collapse-content">
+            <p>No! Streetdog BMX is a one-time purchase with no microtransactions. All content, including future updates, is included in the base game price.</p>
+          </div>
+        </div>
+        
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title font-medium">
+            Will there be post-launch content?
+          </div>
+          <div class="collapse-content">
+            <p>Yes, the developers are committed to regular updates including bug fixes, optimizations, and potential new content based on community feedback. All updates are free.</p>
+          </div>
+        </div>
+        
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title font-medium">
+            Is a controller required?
+          </div>
+          <div class="collapse-content">
+            <p>While the game supports keyboard and mouse, a controller is highly recommended for the best experience. Xbox and PlayStation controllers work perfectly on all platforms.</p>
+          </div>
+        </div>
+        
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="checkbox" />
+          <div class="collapse-title font-medium">
+            Can I play offline?
+          </div>
+          <div class="collapse-content">
+            <p>Yes! The entire game can be played offline. Online connectivity is only required for leaderboards, sharing replays, and checking for updates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 rounded-3xl p-8">
+      <div class="text-center">
+        <Download class="h-16 w-16 mx-auto mb-6 text-primary" />
+        <h2 class="text-4xl font-bold mb-4">Get Streetdog BMX Today!</h2>
+        <p class="text-xl opacity-80 mb-8 max-w-2xl mx-auto">
+          Join thousands of players worldwide in the most authentic BMX experience ever created
+        </p>
+        
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/official/" class="btn btn-primary btn-lg gap-2">
+            <Download class="h-5 w-5" />
+            Download Now
+          </a>
+          <a href="/guides/beginner-guide/" class="btn btn-outline btn-lg">
+            Start Learning
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
+

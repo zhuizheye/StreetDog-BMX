@@ -1,0 +1,520 @@
+---
+import Layout from '../../components/Layout.astro';
+import { Zap, Star, TrendingUp, Target } from 'lucide-astro';
+import tricksData from '../../data/tricks.json';
+
+const { airTricks, grindTricks, manualTricks, specialTricks } = tricksData;
+---
+
+<Layout 
+  title="Tricks & Combos Guide"
+  description="Complete tricks and combos guide for Streetdog BMX - Master air tricks, grinds, manuals, and build high-scoring combinations."
+  keywords={['streetdog bmx tricks', 'streetdog bmx combos', 'bmx tricks list', 'how to combo streetdog bmx']}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="breadcrumbs text-sm mb-4">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/guides/">Guides</a></li>
+          <li>Tricks & Combos</li>
+        </ul>
+      </div>
+      
+      <h1 class="text-5xl font-bold mb-4">
+        Tricks & <span class="text-primary">Combos</span> Guide
+      </h1>
+      <p class="text-xl opacity-80">
+        Master every trick and learn to chain them into massive combos
+      </p>
+    </div>
+    
+    <div class="prose-custom max-w-none">
+      <!-- Air Tricks -->
+      <section class="mb-12">
+        <h2 class="flex items-center gap-3">
+          <Zap class="h-8 w-8 text-primary" />
+          Air Tricks
+        </h2>
+        
+        <p>Air tricks are performed while airborne. Use the right stick to execute different moves.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
+          {airTricks.map((trick) => (
+            <div class="card bg-base-200">
+              <div class="card-body">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="card-title text-lg">{trick.name}</h3>
+                  <div class={`badge ${
+                    trick.difficulty === 'Beginner' ? 'badge-success' :
+                    trick.difficulty === 'Intermediate' ? 'badge-warning' :
+                    trick.difficulty === 'Advanced' ? 'badge-error' : 'badge-error'
+                  }`}>
+                    {trick.difficulty}
+                  </div>
+                </div>
+                <p class="text-sm opacity-80 mb-2">{trick.description}</p>
+                <div class="bg-base-300 rounded p-2 text-xs mb-2">
+                  <strong>Input:</strong> {trick.input}
+                </div>
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-primary font-bold">{trick.basePoints} pts</span>
+                  {trick.tips && (
+                    <span class="text-xs opacity-60">💡 {trick.tips}</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div class="alert alert-info">
+          <Star class="h-6 w-6" />
+          <div>
+            <h3 class="font-bold">Pro Tip</h3>
+            <div class="text-sm">Combine spins with flips for massive point bonuses. A 360 + Backflip combo is worth more than both tricks separately!</div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Grind Tricks -->
+      <section class="mb-12">
+        <h2 class="flex items-center gap-3">
+          <Target class="h-8 w-8 text-secondary" />
+          Grind Tricks
+        </h2>
+        
+        <p>Grinds are performed on rails, ledges, and coping. They're essential for combo extension and maintaining flow.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          {grindTricks.map((trick) => (
+            <div class="card bg-base-200">
+              <div class="card-body">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="card-title">{trick.name}</h3>
+                  <div class={`badge ${
+                    trick.difficulty === 'Beginner' ? 'badge-success' :
+                    trick.difficulty === 'Intermediate' ? 'badge-warning' :
+                    trick.difficulty === 'Advanced' ? 'badge-error' : 'badge-error'
+                  }`}>
+                    {trick.difficulty}
+                  </div>
+                </div>
+                <p class="text-sm opacity-80 mb-2">{trick.description}</p>
+                <div class="bg-base-300 rounded p-2 text-xs mb-2">
+                  <strong>Input:</strong> {trick.input}
+                </div>
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-primary font-bold">{trick.basePoints} pts</span>
+                  <span class="text-secondary">+{trick.pointsPerSecond}/sec</span>
+                </div>
+                {trick.tips && (
+                  <p class="text-xs opacity-60 mt-2">💡 {trick.tips}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+      
+      <!-- Manual Tricks -->
+      <section class="mb-12">
+        <h2>Ground Tricks (Manuals)</h2>
+        
+        <p>Manuals are the glue that holds combos together. Master these to extend your combos indefinitely.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+          {manualTricks.map((trick) => (
+            <div class="card bg-base-200 border-2 border-accent">
+              <div class="card-body">
+                <div class="flex items-start justify-between mb-2">
+                  <h3 class="card-title text-accent">{trick.name}</h3>
+                  <div class={`badge ${
+                    trick.difficulty === 'Beginner' ? 'badge-success' : 'badge-warning'
+                  }`}>
+                    {trick.difficulty}
+                  </div>
+                </div>
+                <p class="text-sm opacity-80 mb-2">{trick.description}</p>
+                <div class="bg-base-300 rounded p-2 text-xs mb-2">
+                  <strong>Input:</strong> {trick.input}
+                </div>
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-primary font-bold">{trick.basePoints} pts</span>
+                  <span class="text-accent">+{trick.pointsPerSecond}/sec</span>
+                </div>
+                <p class="text-xs opacity-60 mt-2">💡 {trick.tips}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div class="alert alert-warning">
+          <TrendingUp class="h-6 w-6" />
+          <div>
+            <h3 class="font-bold">Essential Skill!</h3>
+            <div class="text-sm">Manuals are THE most important skill in Streetdog BMX. Without them, you cannot build high-scoring combos. Practice manuals on flat ground until they become second nature.</div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Special Tricks -->
+      {specialTricks && specialTricks.length > 0 && (
+        <section class="mb-12">
+          <h2>Special Tricks</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+            {specialTricks.map((trick) => (
+              <div class="card bg-gradient-to-br from-primary/20 to-secondary/20 border border-primary/30">
+                <div class="card-body">
+                  <div class="flex items-start justify-between mb-2">
+                    <h3 class="card-title">{trick.name}</h3>
+                    <div class={`badge ${
+                      trick.difficulty === 'Beginner' ? 'badge-success' :
+                      trick.difficulty === 'Intermediate' ? 'badge-warning' :
+                      'badge-error'
+                    }`}>
+                      {trick.difficulty}
+                    </div>
+                  </div>
+                  <p class="text-sm opacity-80 mb-2">{trick.description}</p>
+                  <div class="bg-base-300 rounded p-2 text-xs mb-2">
+                    <strong>Input:</strong> {trick.input}
+                  </div>
+                  <div class="text-sm">
+                    <span class="text-primary font-bold">{trick.basePoints} pts</span>
+                  </div>
+                  <p class="text-xs opacity-60 mt-2">💡 {trick.tips}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+      
+      <!-- Combo Building -->
+      <section class="mb-12">
+        <h2>Combo Building 101</h2>
+        
+        <h3>Basic Combo Structure</h3>
+        <div class="bg-base-200 rounded-2xl p-6 my-6">
+          <ol class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="badge badge-primary">1</span>
+              <div>
+                <strong>Launch:</strong> Use bunny hop or ramp to get airborne
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="badge badge-primary">2</span>
+              <div>
+                <strong>Air Trick:</strong> Execute spin, flip, or barspin while in air
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="badge badge-primary">3</span>
+              <div>
+                <strong>Land to Manual:</strong> Press manual button on landing to extend combo
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="badge badge-primary">4</span>
+              <div>
+                <strong>Grind:</strong> Approach rail or ledge while in manual, transition to grind
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="badge badge-primary">5</span>
+              <div>
+                <strong>Manual Exit:</strong> Exit grind into manual, continue or finish combo
+              </div>
+            </li>
+          </ol>
+        </div>
+        
+        <h3>Example Combos</h3>
+        
+        <div class="space-y-6 my-6">
+          <!-- Beginner Combo -->
+          <div class="card bg-gradient-to-r from-success/10 to-success/5 border border-success/20">
+            <div class="card-body">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="badge badge-success badge-lg">Beginner</div>
+                <h4 class="text-xl font-bold">First Real Combo</h4>
+                <span class="text-success font-bold">~8,000 pts</span>
+              </div>
+              <div class="bg-base-200 rounded-lg p-4 font-mono text-sm">
+                Bunny Hop → 360 Spin → Manual → Rail Grind (2 sec) → Manual → Barspin → Land
+              </div>
+              <p class="text-sm opacity-80 mt-3">
+                <strong>Why it works:</strong> Simple tricks that are easy to land, with two manual sections to keep combo alive. Perfect for practicing the flow.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Intermediate Combo -->
+          <div class="card bg-gradient-to-r from-warning/10 to-warning/5 border border-warning/20">
+            <div class="card-body">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="badge badge-warning badge-lg">Intermediate</div>
+                <h4 class="text-xl font-bold">Street Line Special</h4>
+                <span class="text-warning font-bold">~25,000 pts</span>
+              </div>
+              <div class="bg-base-200 rounded-lg p-4 font-mono text-sm">
+                Ramp Launch → Backflip + 360 → Manual → Ledge Grind → Manual → Gap Jump → Tailwhip → Feeble Grind → Land
+              </div>
+              <p class="text-sm opacity-80 mt-3">
+                <strong>Why it works:</strong> Combines air tricks with multiple grinds and a gap for bonus points. Uses variety for multiplier boost.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Advanced Combo -->
+          <div class="card bg-gradient-to-r from-error/10 to-error/5 border border-error/20">
+            <div class="card-body">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="badge badge-error badge-lg">Advanced</div>
+                <h4 class="text-xl font-bold">The Megacombo</h4>
+                <span class="text-error font-bold">~75,000+ pts</span>
+              </div>
+              <div class="bg-base-200 rounded-lg p-4 font-mono text-sm">
+                Wallride → Gap → Double Backflip + 540 → Manual → Transfer → Icepick Grind → Manual → Roof Gap → Barspin + 360 → Feeble Grind (3 sec) → Manual → Superman → Land
+              </div>
+              <p class="text-sm opacity-80 mt-3">
+                <strong>Why it works:</strong> Maximum variety (no repeated tricks), special spot bonuses (wallride, transfer, roof gap), extended grinds, and perfect execution. This is what mastery looks like.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Combo Tips -->
+      <section class="mb-12">
+        <h2>Combo Mastery Tips</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Timing</h3>
+              <ul class="space-y-2 text-sm">
+                <li>✓ Don't rush trick inputs</li>
+                <li>✓ Wait for full rotation before landing</li>
+                <li>✓ Manual input right on landing</li>
+                <li>✓ Practice rhythm and flow</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-secondary">Terrain Usage</h3>
+              <ul class="space-y-2 text-sm">
+                <li>✓ Gaps add multipliers</li>
+                <li>✓ Wallrides boost points</li>
+                <li>✓ Transfers = combo extension</li>
+                <li>✓ Use elevation changes</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-accent">Risk vs Reward</h3>
+              <ul class="space-y-2 text-sm">
+                <li>✓ Landing clean > big tricks</li>
+                <li>✓ Consistency beats luck</li>
+                <li>✓ Know when to end combo</li>
+                <li>✓ Save risky tricks for practice</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <h3 class="card-title text-warning">Map Knowledge</h3>
+              <ul class="space-y-2 text-sm">
+                <li>✓ Learn optimal combo routes</li>
+                <li>✓ Find hidden multiplier spots</li>
+                <li>✓ Plan escape routes</li>
+                <li>✓ Watch replays for ideas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Scoring System -->
+      <section class="mb-12">
+        <h2>Understanding the Scoring System</h2>
+        
+        <div class="bg-base-200 rounded-2xl p-6">
+          <h3 class="text-xl font-bold mb-4">How Points Are Calculated</h3>
+          
+          <div class="space-y-4">
+            <div>
+              <h4 class="font-semibold text-primary mb-2">Base Trick Points</h4>
+              <ul class="text-sm space-y-1">
+                <li>• Simple tricks: 100-500 points</li>
+                <li>• Intermediate tricks: 500-1,500 points</li>
+                <li>• Advanced tricks: 1,500-3,000 points</li>
+                <li>• Expert tricks: 3,000-5,000 points</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-secondary mb-2">Combo Multiplier</h4>
+              <p class="text-sm mb-2">Your combo multiplier increases with:</p>
+              <ul class="text-sm space-y-1">
+                <li>• Number of tricks in combo</li>
+                <li>• Trick variety (no repeats = bonus)</li>
+                <li>• Special location bonuses</li>
+                <li>• Clean landings maintain multiplier</li>
+              </ul>
+              <div class="bg-base-300 rounded p-3 mt-3 text-sm">
+                <strong>Formula:</strong><br>
+                Base Multiplier = 1.0x<br>
+                Each Trick = +0.2x<br>
+                Variety Bonus = +0.5x (every 5 unique tricks)<br>
+                Special Spot = +1.0x<br>
+                Crash = Combo lost
+              </div>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-accent mb-2">Special Bonuses</h4>
+              <ul class="text-sm space-y-1">
+                <li>• <strong>Gap Bonus:</strong> +500-2,000 per gap</li>
+                <li>• <strong>Transfer Bonus:</strong> +300-1,000 per transfer</li>
+                <li>• <strong>Wallride Bonus:</strong> +200-800</li>
+                <li>• <strong>Hidden Spot Bonus:</strong> +1,000-5,000</li>
+                <li>• <strong>Manual Extension:</strong> +50 per second</li>
+                <li>• <strong>Grind Extension:</strong> +100 per second</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Trick Mastery Checklist -->
+      <section class="mb-12">
+        <h2>Trick Mastery Checklist</h2>
+        
+        <div class="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6">
+          <p class="mb-4">Track your progress as you master Streetdog BMX:</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="space-y-2">
+              <h4 class="font-bold text-primary mb-3">Basic Skills</h4>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-primary" />
+                <span class="text-sm">Land 10 different air tricks</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-primary" />
+                <span class="text-sm">Grind 5 different rail types</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-primary" />
+                <span class="text-sm">Manual for 10 seconds continuously</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-primary" />
+                <span class="text-sm">Complete a 5-trick combo</span>
+              </label>
+            </div>
+            
+            <div class="space-y-2">
+              <h4 class="font-bold text-secondary mb-3">Intermediate Skills</h4>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-secondary" />
+                <span class="text-sm">Complete a 10-trick combo</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-secondary" />
+                <span class="text-sm">Score 25,000 in single combo</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-secondary" />
+                <span class="text-sm">Manual-to-grind transition</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-secondary" />
+                <span class="text-sm">Land a wallride combo</span>
+              </label>
+            </div>
+            
+            <div class="space-y-2">
+              <h4 class="font-bold text-accent mb-3">Advanced Skills</h4>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-accent" />
+                <span class="text-sm">Score 50,000 in single combo</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-accent" />
+                <span class="text-sm">Chain 3 gaps in one combo</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-accent" />
+                <span class="text-sm">Use transfer effectively</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-accent" />
+                <span class="text-sm">Complete 15-trick combo</span>
+              </label>
+            </div>
+            
+            <div class="space-y-2">
+              <h4 class="font-bold text-error mb-3">Expert Skills</h4>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-error" />
+                <span class="text-sm">Score 100,000+ combo</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-error" />
+                <span class="text-sm">Land double backflip consistently</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-error" />
+                <span class="text-sm">Master flair in bowl</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" class="checkbox checkbox-error" />
+                <span class="text-sm">Complete 20+ trick combo</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Next Steps -->
+      <section>
+        <h2>Ready for More?</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+          <a href="/guides/advanced-techniques/" class="card bg-base-200 hover:bg-base-300 card-hover">
+            <div class="card-body">
+              <h3 class="card-title text-primary">Advanced Techniques</h3>
+              <p class="text-sm">Physics exploits, line optimization, and expert strategies</p>
+            </div>
+          </a>
+          
+          <a href="/maps/" class="card bg-base-200 hover:bg-base-300 card-hover">
+            <div class="card-body">
+              <h3 class="card-title text-secondary">Explore Maps</h3>
+              <p class="text-sm">Find the best spots for practicing specific tricks</p>
+            </div>
+          </a>
+          
+          <a href="/tier-list/" class="card bg-base-200 hover:bg-base-300 card-hover">
+            <div class="card-body">
+              <h3 class="card-title text-accent">Trick Tier List</h3>
+              <p class="text-sm">See which tricks are most effective for scoring</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>
+

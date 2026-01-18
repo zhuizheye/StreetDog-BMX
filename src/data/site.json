@@ -1,0 +1,140 @@
+{
+  "site": {
+    "name": "Streetdog BMX Wiki",
+    "tagline": "Your Ultimate Guide to Streetdog BMX",
+    "description": "Complete guides, tricks, maps, and builds for Streetdog BMX - Released January 14, 2026",
+    "url": "https://streetdogbmx.wiki",
+    "defaultLanguage": "en",
+    "languages": [
+      {
+        "code": "en",
+        "name": "English",
+        "flag": "🇺🇸"
+      }
+    ]
+  },
+  "game": {
+    "title": "Streetdog BMX",
+    "developer": "Yeah Us! Games",
+    "publisher": "Null Games",
+    "releaseDate": "2026-01-14",
+    "platforms": ["PC (Steam)", "PlayStation 4", "Xbox One"],
+    "genre": ["Sports", "Indie", "Arcade", "Simulation"],
+    "steamAppId": "2707870",
+    "features": [
+      "270+ Challenges",
+      "6 Handcrafted Maps",
+      "Deep Customization",
+      "Realistic Physics",
+      "Replay Editor",
+      "Controller Support"
+    ]
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "href": "/",
+      "icon": "home"
+    },
+    {
+      "label": "Guides",
+      "href": "/guides/",
+      "icon": "book-open",
+      "children": [
+        {
+          "label": "Beginner's Guide",
+          "href": "/guides/beginner-guide/"
+        },
+        {
+          "label": "Tricks & Combos",
+          "href": "/guides/tricks-combos/"
+        },
+        {
+          "label": "Advanced Techniques",
+          "href": "/guides/advanced-techniques/"
+        }
+      ]
+    },
+    {
+      "label": "Tier List",
+      "href": "/tier-list/",
+      "icon": "trophy"
+    },
+    {
+      "label": "Characters",
+      "href": "/characters/",
+      "icon": "user"
+    },
+    {
+      "label": "Builds",
+      "href": "/builds/",
+      "icon": "wrench"
+    },
+    {
+      "label": "Codes",
+      "href": "/codes/",
+      "icon": "gift"
+    },
+    {
+      "label": "Maps",
+      "href": "/maps/",
+      "icon": "map"
+    },
+    {
+      "label": "Release",
+      "href": "/release/",
+      "icon": "calendar"
+    },
+    {
+      "label": "Tools",
+      "href": "/tools/score-calculator/",
+      "icon": "calculator"
+    },
+    {
+      "label": "Official",
+      "href": "/official/",
+      "icon": "external-link"
+    }
+  ],
+  "footer": {
+    "links": [
+      {
+        "label": "Legal & Copyright",
+        "href": "/legal/"
+      }
+    ],
+    "social": [
+      {
+        "platform": "Steam",
+        "url": "https://store.steampowered.com/app/2707870/Streetdog_BMX/",
+        "icon": "steam"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/yeahusgames",
+        "icon": "instagram"
+      }
+    ],
+    "copyright": "© 2026 Streetdog BMX Wiki. Streetdog BMX is a trademark of Yeah Us! Games. Fan-created wiki, not officially affiliated."
+  },
+  "seo": {
+    "defaultTitle": "Streetdog BMX Wiki - Complete Guide & Database",
+    "titleTemplate": "%s | Streetdog BMX Wiki",
+    "defaultDescription": "The ultimate Streetdog BMX guide featuring tricks, combos, maps, bike builds, tier lists, and tips. Master this arcade BMX game on PC, PS4, and Xbox One.",
+    "keywords": [
+      "streetdog bmx",
+      "streetdog bmx guide",
+      "bmx game",
+      "tricks guide",
+      "bmx maps",
+      "bike builds",
+      "steam bmx game",
+      "streetdog bmx wiki",
+      "bmx simulator",
+      "tony hawk bmx"
+    ],
+    "ogImage": "/og-image.jpg",
+    "twitterCard": "summary_large_image"
+  }
+}
+

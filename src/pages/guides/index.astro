@@ -1,0 +1,158 @@
+---
+import Layout from '../../components/Layout.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { BookOpen, Zap, Target, Award } from 'lucide-astro';
+---
+
+<Layout 
+  title="Guides"
+  description="Complete guides for Streetdog BMX - Learn tricks, combos, advanced techniques, and master the game."
+  keywords={['streetdog bmx guides', 'bmx tricks guide', 'how to play streetdog bmx', 'bmx combos']}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-5xl font-bold mb-4">
+        <span class="text-primary">Guides</span> & Tutorials
+      </h1>
+      <p class="text-xl opacity-80 max-w-2xl mx-auto">
+        Master Streetdog BMX with our comprehensive guides covering everything from basics to advanced techniques.
+      </p>
+    </div>
+    
+    <!-- Main Guides -->
+    <div class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <BookOpen class="h-8 w-8 text-primary" />
+        Core Guides
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <GuideCard
+          title="Beginner's Guide"
+          description="Complete introduction to Streetdog BMX. Learn controls, basic mechanics, first steps, and essential tips to get started."
+          href="/guides/beginner-guide/"
+          difficulty="Beginner"
+          icon={BookOpen}
+        />
+        
+        <GuideCard
+          title="Tricks & Combos"
+          description="Master air tricks, grinds, manuals, and special moves. Learn how to chain tricks into high-scoring combos."
+          href="/guides/tricks-combos/"
+          difficulty="Intermediate"
+          icon={Zap}
+        />
+        
+        <GuideCard
+          title="Advanced Techniques"
+          description="Expert-level strategies including physics exploitation, line optimization, and challenge completion tactics."
+          href="/guides/advanced-techniques/"
+          difficulty="Advanced"
+          icon={Target}
+        />
+      </div>
+    </div>
+    
+    <!-- Quick Tips -->
+    <div class="bg-base-200 rounded-3xl p-8 mb-16">
+      <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
+        <Award class="h-8 w-8 text-secondary" />
+        Quick Tips
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card bg-base-300">
+          <div class="card-body">
+            <h3 class="card-title text-primary">For Beginners</h3>
+            <ul class="space-y-2 text-sm">
+              <li>✓ Start in The Skate Park to learn basics</li>
+              <li>✓ Master the manual before attempting combos</li>
+              <li>✓ Use pump mechanic for speed and height</li>
+              <li>✓ Practice one trick at a time</li>
+              <li>✓ Don't rush - consistency over complexity</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card bg-base-300">
+          <div class="card-body">
+            <h3 class="card-title text-secondary">For Intermediate Players</h3>
+            <ul class="space-y-2 text-sm">
+              <li>✓ Focus on combo variety (no repeats)</li>
+              <li>✓ Learn map-specific lines</li>
+              <li>✓ Practice grind transitions</li>
+              <li>✓ Utilize gaps and transfers</li>
+              <li>✓ Watch replays to analyze mistakes</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card bg-base-300">
+          <div class="card-body">
+            <h3 class="card-title text-accent">For Advanced Players</h3>
+            <ul class="space-y-2 text-sm">
+              <li>✓ Optimize routes for maximum points</li>
+              <li>✓ Master special spot multipliers</li>
+              <li>✓ Perfect technical tricks (flair, double backflip)</li>
+              <li>✓ Complete expert challenges</li>
+              <li>✓ Experiment with physics-based shortcuts</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card bg-base-300">
+          <div class="card-body">
+            <h3 class="card-title text-warning">General Tips</h3>
+            <ul class="space-y-2 text-sm">
+              <li>✓ Controller highly recommended</li>
+              <li>✓ Adjust camera settings to preference</li>
+              <li>✓ Complete challenges for unlocks</li>
+              <li>✓ Explore every map thoroughly</li>
+              <li>✓ Join Discord for community tips</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Learning Path -->
+    <div>
+      <h2 class="text-3xl font-bold mb-8">Recommended Learning Path</h2>
+      
+      <div class="steps steps-vertical lg:steps-horizontal w-full">
+        <div class="step step-primary">
+          <div class="text-left ml-4">
+            <h3 class="font-bold">Step 1: Basics</h3>
+            <p class="text-sm opacity-70">Controls & Movement</p>
+          </div>
+        </div>
+        <div class="step step-primary">
+          <div class="text-left ml-4">
+            <h3 class="font-bold">Step 2: Tricks</h3>
+            <p class="text-sm opacity-70">Learn Individual Moves</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="text-left ml-4">
+            <h3 class="font-bold">Step 3: Combos</h3>
+            <p class="text-sm opacity-70">Chain Tricks Together</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="text-left ml-4">
+            <h3 class="font-bold">Step 4: Maps</h3>
+            <p class="text-sm opacity-70">Explore & Find Lines</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="text-left ml-4">
+            <h3 class="font-bold">Step 5: Master</h3>
+            <p class="text-sm opacity-70">Advanced Techniques</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+

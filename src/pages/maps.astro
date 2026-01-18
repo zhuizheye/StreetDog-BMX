@@ -1,0 +1,312 @@
+---
+import Layout from '../components/Layout.astro';
+import MapCard from '../components/MapCard.astro';
+import { Map, MapPin, Star, Award } from 'lucide-astro';
+import mapsData from '../data/maps.json';
+
+const { maps, mapTypes } = mapsData;
+---
+
+<Layout 
+  title="Maps Guide"
+  description="Complete maps guide for Streetdog BMX - Explore 6 handcrafted maps with hidden spots, challenges, and detailed location breakdowns."
+  keywords={['streetdog bmx maps', 'bmx maps', 'hidden spots', 'map guide', 'locations']}
+>
+  <div class="container mx-auto px-4 py-16">
+    <!-- Header -->
+    <div class="mb-12">
+      <div class="breadcrumbs text-sm mb-4">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li>Maps</li>
+        </ul>
+      </div>
+      
+      <h1 class="text-5xl font-bold mb-4">
+        Maps <span class="text-primary">Guide</span>
+      </h1>
+      <p class="text-xl opacity-80 mb-6">
+        6 massive handcrafted maps designed for exploration, creativity, and technical mastery
+      </p>
+      
+      <div class="stats stats-vertical md:stats-horizontal shadow bg-base-200">
+        <div class="stat">
+          <div class="stat-figure text-primary">
+            <Map class="h-8 w-8" />
+          </div>
+          <div class="stat-title">Total Maps</div>
+          <div class="stat-value text-primary">6</div>
+          <div class="stat-desc">Handcrafted environments</div>
+        </div>
+        
+        <div class="stat">
+          <div class="stat-figure text-secondary">
+            <MapPin class="h-8 w-8" />
+          </div>
+          <div class="stat-title">Hidden Spots</div>
+          <div class="stat-value text-secondary">{maps.reduce((sum, m) => sum + m.hiddenSpots, 0)}+</div>
+          <div class="stat-desc">Across all maps</div>
+        </div>
+        
+        <div class="stat">
+          <div class="stat-figure text-accent">
+            <Award class="h-8 w-8" />
+          </div>
+          <div class="stat-title">Total Challenges</div>
+          <div class="stat-value text-accent">{maps.reduce((sum, m) => sum + m.challengeCount, 0)}+</div>
+          <div class="stat-desc">270+ objectives</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- All Maps -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">All Maps</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {maps.map((map) => (
+          <MapCard map={map} />
+        ))}
+      </div>
+    </section>
+    
+    <!-- Detailed Map Guides -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Detailed Map Information</h2>
+      
+      <div class="space-y-8">
+        {maps.map((map) => (
+          <div class="card bg-base-200">
+            <div class="card-body">
+              <div class="flex items-start justify-between mb-4">
+                <div>
+                  <h3 class="text-2xl font-bold mb-2">{map.name}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    <div class="badge badge-lg badge-primary">{map.difficulty}</div>
+                    <div class="badge badge-lg badge-outline">{map.size}</div>
+                    <div class="badge badge-lg badge-outline">{map.focus}</div>
+                  </div>
+                </div>
+              </div>
+              
+              <p class="opacity-80 mb-6">{map.description}</p>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <h4 class="font-bold text-primary mb-3">Key Features</h4>
+                  <ul class="space-y-1 text-sm">
+                    {map.features.map((feature) => (
+                      <li class="flex gap-2">
+                        <Star class="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div>
+                  <h4 class="font-bold text-secondary mb-3">Best For</h4>
+                  <ul class="space-y-1 text-sm">
+                    {map.bestFor.map((item) => (
+                      <li class="flex gap-2">
+                        <Award class="h-4 w-4 text-secondary flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              
+              {map.tips && (
+                <div class="bg-base-300 rounded-lg p-4">
+                  <h4 class="font-bold text-accent mb-3">Tips & Tricks</h4>
+                  <ul class="space-y-2 text-sm">
+                    {map.tips.map((tip) => (
+                      <li class="flex gap-2">
+                        <span class="text-accent">▸</span>
+                        <span>{tip}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              
+              {map.keyLocations && (
+                <div class="mt-4">
+                  <h4 class="font-bold mb-3">Key Locations</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {map.keyLocations.map((location) => (
+                      <div class="bg-base-300 rounded p-3 text-sm">
+                        <MapPin class="h-4 w-4 inline text-primary mr-2" />
+                        {location}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              
+              <div class="stats stats-vertical md:stats-horizontal shadow mt-6">
+                <div class="stat bg-base-300">
+                  <div class="stat-title text-xs">Hidden Spots</div>
+                  <div class="stat-value text-2xl text-primary">{map.hiddenSpots}</div>
+                </div>
+                <div class="stat bg-base-300">
+                  <div class="stat-title text-xs">Challenges</div>
+                  <div class="stat-value text-2xl text-secondary">{map.challengeCount}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+    
+    <!-- Map Categories -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Maps by Type</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="card bg-gradient-to-br from-primary/20 to-primary/5">
+          <div class="card-body">
+            <h3 class="card-title text-primary">Street Maps</h3>
+            <p class="text-sm opacity-80 mb-3">Authentic urban BMX environments</p>
+            <div class="flex flex-wrap gap-2">
+              {mapTypes.street.map((id) => {
+                const map = maps.find(m => m.id === id);
+                return map && <div class="badge badge-primary">{map.name}</div>;
+              })}
+            </div>
+          </div>
+        </div>
+        
+        <div class="card bg-gradient-to-br from-secondary/20 to-secondary/5">
+          <div class="card-body">
+            <h3 class="card-title text-secondary">Park Maps</h3>
+            <p class="text-sm opacity-80 mb-3">Skate park and transition focused</p>
+            <div class="flex flex-wrap gap-2">
+              {mapTypes.park.map((id) => {
+                const map = maps.find(m => m.id === id);
+                return map && <div class="badge badge-secondary">{map.name}</div>;
+              })}
+            </div>
+          </div>
+        </div>
+        
+        <div class="card bg-gradient-to-br from-accent/20 to-accent/5">
+          <div class="card-body">
+            <h3 class="card-title text-accent">Vertical Maps</h3>
+            <p class="text-sm opacity-80 mb-3">Height variation and big gaps</p>
+            <div class="flex flex-wrap gap-2">
+              {mapTypes.vertical.map((id) => {
+                const map = maps.find(m => m.id === id);
+                return map && <div class="badge badge-accent">{map.name}</div>;
+              })}
+            </div>
+          </div>
+        </div>
+        
+        <div class="card bg-gradient-to-br from-error/20 to-error/5">
+          <div class="card-body">
+            <h3 class="card-title text-error">Expert Maps</h3>
+            <p class="text-sm opacity-80 mb-3">High difficulty technical challenges</p>
+            <div class="flex flex-wrap gap-2">
+              {mapTypes.expert.map((id) => {
+                const map = maps.find(m => m.id === id);
+                return map && <div class="badge badge-error">{map.name}</div>;
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Exploration Tips -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8">Map Exploration Guide</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-primary">First Visit Strategy</h3>
+            <ol class="text-sm space-y-2">
+              <li>1. Survey from high points</li>
+              <li>2. Follow natural lines</li>
+              <li>3. Mark interesting spots</li>
+              <li>4. Complete easy challenges</li>
+              <li>5. Discover secrets</li>
+            </ol>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-secondary">Hidden Spot Hunting</h3>
+            <ul class="text-sm space-y-2">
+              <li>✓ Check behind buildings</li>
+              <li>✓ Look for unusual ramps</li>
+              <li>✓ Follow perfect lines</li>
+              <li>✓ Try impossible gaps</li>
+              <li>✓ Explore map edges</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="card bg-base-200">
+          <div class="card-body">
+            <h3 class="card-title text-accent">Challenge Optimization</h3>
+            <ul class="text-sm space-y-2">
+              <li>✓ Group by map area</li>
+              <li>✓ Complete similar together</li>
+              <li>✓ Plan efficient routes</li>
+              <li>✓ Return as skills improve</li>
+              <li>✓ Track completion %</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Map Records -->
+    <section class="mb-16">
+      <div class="card bg-gradient-to-br from-warning/10 to-warning/5 border border-warning/20">
+        <div class="card-body text-center">
+          <Award class="h-16 w-16 mx-auto mb-4 text-warning" />
+          <h2 class="text-2xl font-bold mb-4">Map-Specific Records</h2>
+          <p class="opacity-80 mb-6">
+            Leaderboard integration coming soon! Track your best scores and compete with players worldwide on each map.
+          </p>
+          <a href="/official/" class="btn btn-warning">Join Community</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Related -->
+    <section>
+      <h2 class="text-3xl font-bold mb-6">Continue Learning</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <a href="/guides/advanced-techniques/" class="card bg-base-200 hover:bg-base-300 card-hover">
+          <div class="card-body">
+            <h3 class="card-title text-primary">Advanced Techniques</h3>
+            <p class="text-sm">Master map-specific strategies</p>
+          </div>
+        </a>
+        
+        <a href="/tier-list/" class="card bg-base-200 hover:bg-base-300 card-hover">
+          <div class="card-body">
+            <h3 class="card-title text-secondary">Map Rankings</h3>
+            <p class="text-sm">See which maps offer the most</p>
+          </div>
+        </a>
+        
+        <a href="/builds/" class="card bg-base-200 hover:bg-base-300 card-hover">
+          <div class="card-body">
+            <h3 class="card-title text-accent">Map-Specific Builds</h3>
+            <p class="text-sm">Optimize your bike per map</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>
+

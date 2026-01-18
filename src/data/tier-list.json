@@ -1,0 +1,209 @@
+{
+  "tierList": {
+    "lastUpdated": "2026-01-18",
+    "version": "1.0",
+    "category": "Bike Builds",
+    "description": "Community tier rankings for optimal bike builds based on versatility, effectiveness, and performance across all maps and challenges."
+  },
+  "tiers": {
+    "S": {
+      "label": "S-Tier",
+      "description": "Best overall builds - highly effective across multiple scenarios",
+      "color": "#ff6b35",
+      "builds": [
+        {
+          "id": "speed-demon",
+          "name": "Speed Demon Build",
+          "reason": "Dominates score challenges and high-score runs. Essential for competitive play.",
+          "strengths": ["Top speed", "Score optimization", "Combo extension"],
+          "weaknesses": ["Requires skill", "Less stable"]
+        },
+        {
+          "id": "street-tech",
+          "name": "Street Tech Build",
+          "reason": "Perfect for technical street riding. Excels in most maps with proper skill.",
+          "strengths": ["Technical mastery", "Street versatility", "Combo potential"],
+          "weaknesses": ["High skill floor", "Not beginner-friendly"]
+        }
+      ]
+    },
+    "A": {
+      "label": "A-Tier",
+      "description": "Excellent builds - strong choices for specific purposes",
+      "color": "#f7931e",
+      "builds": [
+        {
+          "id": "all-rounder",
+          "name": "All-Rounder Build",
+          "reason": "Best starter build. Viable for all content and forgiving to learn.",
+          "strengths": ["Versatility", "Beginner-friendly", "No major weaknesses"],
+          "weaknesses": ["No specialization", "Not optimal anywhere"]
+        },
+        {
+          "id": "grind-machine",
+          "name": "Grind Machine Build",
+          "reason": "Dominates rail and grind challenges. Essential for grind-focused maps.",
+          "strengths": ["Grind stability", "Rail mastery", "Technical control"],
+          "weaknesses": ["Slower speed", "Limited air game"]
+        },
+        {
+          "id": "air-master",
+          "name": "Air Master Build",
+          "reason": "Best for air challenges and big tricks. Excels on specific maps.",
+          "strengths": ["Air control", "Flip/spin optimization", "Height advantage"],
+          "weaknesses": ["Limited versatility", "Weak ground game"]
+        }
+      ]
+    },
+    "B": {
+      "label": "B-Tier",
+      "description": "Good builds - viable but situational",
+      "color": "#00d9ff",
+      "builds": [
+        {
+          "id": "park-flow",
+          "name": "Park Flow Build",
+          "reason": "Excellent in skate park but limited elsewhere. Great for learning transitions.",
+          "strengths": ["Transition mastery", "Bowl flow", "Air tricks"],
+          "weaknesses": ["Limited to park", "Poor street performance"]
+        }
+      ]
+    }
+  },
+  "trickssTierList": {
+    "S": {
+      "label": "Essential Tricks",
+      "description": "Must-learn tricks for competitive play",
+      "tricks": [
+        {
+          "name": "Manual",
+          "reason": "Core mechanic for combo extension. Required for high scores."
+        },
+        {
+          "name": "360 Spin",
+          "reason": "Versatile, easy to combo, consistent points."
+        },
+        {
+          "name": "Feeble Grind",
+          "reason": "Balanced grind, works on most rails, combo-friendly."
+        },
+        {
+          "name": "Backflip",
+          "reason": "High points, reliable, works in most situations."
+        }
+      ]
+    },
+    "A": {
+      "label": "High-Value Tricks",
+      "description": "Excellent tricks worth mastering",
+      "tricks": [
+        {
+          "name": "Tailwhip",
+          "reason": "Good points, combos well with spins."
+        },
+        {
+          "name": "Barspin",
+          "reason": "Easy to combo, reliable points."
+        },
+        {
+          "name": "Icepick Grind",
+          "reason": "High grind points, impressive."
+        },
+        {
+          "name": "720 Spin",
+          "reason": "Great for air sections, high points."
+        },
+        {
+          "name": "Wallride",
+          "reason": "Unique combo extension, bonus points."
+        }
+      ]
+    },
+    "B": {
+      "label": "Situational Tricks",
+      "description": "Useful in specific scenarios",
+      "tricks": [
+        {
+          "name": "No-Hander",
+          "reason": "Style points, easy to land."
+        },
+        {
+          "name": "Double Peg Grind",
+          "reason": "Beginner-friendly, stable."
+        },
+        {
+          "name": "Nose Manual",
+          "reason": "Variety bonus, harder than manual."
+        },
+        {
+          "name": "Transfer",
+          "reason": "Combo extension, bonus points."
+        }
+      ]
+    },
+    "Expert": {
+      "label": "Expert Tricks",
+      "description": "High risk, high reward - for advanced players",
+      "tricks": [
+        {
+          "name": "Double Backflip",
+          "reason": "Massive points but requires perfect setup."
+        },
+        {
+          "name": "Flair",
+          "reason": "Incredible points, very technical."
+        },
+        {
+          "name": "Barspin + Tailwhip",
+          "reason": "Combo trick, highest air points."
+        },
+        {
+          "name": "Crankslide",
+          "reason": "Technical grind, expert-level."
+        }
+      ]
+    }
+  },
+  "mapsTierList": {
+    "S": {
+      "label": "Best for Grinding",
+      "maps": [
+        {
+          "name": "Downtown District",
+          "reason": "Most content, best variety, longest combo potential."
+        },
+        {
+          "name": "Urban Streets",
+          "reason": "Perfect street feel, excellent spot variety."
+        }
+      ]
+    },
+    "A": {
+      "label": "Great Maps",
+      "maps": [
+        {
+          "name": "Construction Zone",
+          "reason": "Creative opportunities, good exploration."
+        },
+        {
+          "name": "Rooftop Run",
+          "reason": "Best for big airs and epic moments."
+        },
+        {
+          "name": "Secret Compound",
+          "reason": "Ultimate challenge for experts."
+        }
+      ]
+    },
+    "B": {
+      "label": "Beginner Maps",
+      "maps": [
+        {
+          "name": "The Skate Park",
+          "reason": "Perfect for learning but limited replayability."
+        }
+      ]
+    }
+  }
+}
+

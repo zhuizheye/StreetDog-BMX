@@ -1,0 +1,66 @@
+---
+import { Gift, Clock, CheckCircle, XCircle, AlertCircle } from 'lucide-astro';
+
+interface Props {
+  codes: Array<{
+    code: string;
+    reward: string;
+    expiration?: string;
+    status: 'active' | 'expired';
+  }>;
+}
+
+const { codes } = Astro.props;
+---
+
+<div class="space-y-4">
+  {codes.length === 0 ? (
+    <div class="alert alert-info">
+      <AlertCircle class="h-6 w-6" />
+      <div>
+        <h3 class="font-bold">No Active Codes</h3>
+        <div class="text-sm">Check back later for promotional codes!</div>
+      </div>
+    </div>
+  ) : (
+    codes.map((item) => (
+      <div class={`card ${item.status === 'active' ? 'bg-success/10 border border-success' : 'bg-base-300 opacity-60'} shadow-lg`}>
+        <div class="card-body">
+          <div class="flex items-start justify-between">
+            <div class="flex items-center gap-3">
+              <Gift class={`h-6 w-6 ${item.status === 'active' ? 'text-success' : 'text-base-content'}`} />
+              <div>
+                <div class="flex items-center gap-2 mb-1">
+                  <code class="text-xl font-mono font-bold bg-base-200 px-3 py-1 rounded">
+                    {item.code}
+                  </code>
+                  {item.status === 'active' ? (
+                    <CheckCircle class="h-5 w-5 text-success" />
+                  ) : (
+                    <XCircle class="h-5 w-5 text-error" />
+                  )}
+                </div>
+                <p class="text-sm opacity-80">{item.reward}</p>
+                {item.expiration && (
+                  <div class="flex items-center gap-1 mt-2 text-xs opacity-60">
+                    <Clock class="h-3 w-3" />
+                    <span>Expires: {item.expiration}</span>
+                  </div>
+                )}
+              </div>
+            </div>
+            {item.status === 'active' && (
+              <button 
+                class="btn btn-sm btn-primary"
+                onclick={`navigator.clipboard.writeText('${item.code}'); this.innerText='Copied!'; setTimeout(()=>this.innerText='Copy',2000)`}
+              >
+                Copy
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+    ))
+  )}
+</div>
+

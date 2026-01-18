@@ -1,0 +1,51 @@
+---
+import { BookOpen, ArrowRight } from 'lucide-astro';
+
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  difficulty?: string;
+  icon?: any;
+}
+
+const { title, description, href, difficulty, icon: CustomIcon } = Astro.props;
+---
+
+<a href={href} class="card bg-base-200 hover:bg-base-300 shadow-xl card-hover transition-all duration-300 group">
+  <div class="card-body">
+    <div class="flex items-start justify-between">
+      <div class="flex items-center gap-3">
+        {CustomIcon ? (
+          <CustomIcon class="h-8 w-8 text-primary" />
+        ) : (
+          <BookOpen class="h-8 w-8 text-primary" />
+        )}
+        <h3 class="card-title text-xl group-hover:text-primary transition-colors">
+          {title}
+        </h3>
+      </div>
+      {difficulty && (
+        <div class={`badge ${
+          difficulty === 'Beginner' ? 'badge-success' :
+          difficulty === 'Intermediate' ? 'badge-warning' :
+          difficulty === 'Advanced' ? 'badge-error' : 'badge-info'
+        }`}>
+          {difficulty}
+        </div>
+      )}
+    </div>
+    
+    <p class="opacity-80 line-clamp-3">
+      {description}
+    </p>
+    
+    <div class="card-actions justify-end mt-4">
+      <button class="btn btn-primary btn-sm gap-2 group-hover:gap-3 transition-all">
+        Read Guide
+        <ArrowRight class="h-4 w-4" />
+      </button>
+    </div>
+  </div>
+</a>
+

@@ -1,0 +1,67 @@
+---
+import siteData from '../data/site.json';
+
+interface Props {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  ogImage?: string;
+  ogType?: string;
+}
+
+const { title, description, keywords, ogImage, ogType = 'website' } = Astro.props;
+const { seo, site } = siteData;
+
+const pageTitle = title ? `${title} | ${site.name}` : seo.defaultTitle;
+const metaDescription = description || seo.defaultDescription;
+const metaKeywords = keywords?.join(', ') || seo.keywords.join(', ');
+const metaImage = ogImage || seo.ogImage;
+const canonicalURL = new URL(Astro.url.pathname, site.url);
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content={Astro.generator} />
+
+<title>{pageTitle}</title>
+<meta name="description" content={metaDescription} />
+<meta name="keywords" content={metaKeywords} />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={pageTitle} />
+<meta property="og:description" content={metaDescription} />
+<meta property="og:image" content={new URL(metaImage, site.url)} />
+<meta property="og:site_name" content={site.name} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content={seo.twitterCard} />
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={metaDescription} />
+<meta name="twitter:image" content={new URL(metaImage, site.url)} />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<!-- Additional SEO -->
+<meta name="robots" content="index, follow" />
+<meta name="language" content="English" />
+<meta name="revisit-after" content="7 days" />
+<meta name="author" content={site.name} />
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": site.name,
+  "description": site.description,
+  "url": site.url,
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": `${site.url}/?s={search_term_string}`,
+    "query-input": "required name=search_term_string"
+  }
+})} />
+

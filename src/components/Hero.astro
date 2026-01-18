@@ -1,0 +1,94 @@
+---
+import { ArrowRight, Download, Star } from 'lucide-astro';
+import siteData from '../data/site.json';
+
+const { game, site } = siteData;
+---
+
+<section class="hero min-h-[60vh] bg-gradient-to-br from-base-100 via-base-200 to-base-300 relative overflow-hidden">
+  <!-- Animated Background -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-10 left-10 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-xl animate-blob"></div>
+    <div class="absolute top-20 right-10 w-72 h-72 bg-secondary rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
+    <div class="absolute bottom-10 left-1/2 w-72 h-72 bg-accent rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
+  </div>
+  
+  <div class="hero-content text-center relative z-10">
+    <div class="max-w-4xl">
+      <div class="mb-6">
+        <div class="badge badge-primary badge-lg gap-2 mb-4">
+          <Star class="h-4 w-4" />
+          Released January 14, 2026
+        </div>
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+        {site.name}
+      </h1>
+      
+      <p class="text-xl md:text-2xl mb-4 opacity-90">
+        {site.tagline}
+      </p>
+      
+      <p class="text-lg mb-8 opacity-70 max-w-2xl mx-auto">
+        Master the streets, learn tricks, explore maps, and dominate the leaderboards in this spiritual successor to Tony Hawk and Dave Mirra games.
+      </p>
+      
+      <div class="flex flex-wrap gap-4 justify-center mb-8">
+        {game.features.slice(0, 3).map((feature) => (
+          <div class="badge badge-outline badge-lg">{feature}</div>
+        ))}
+      </div>
+      
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/guides/beginner-guide/" class="btn btn-primary btn-lg gap-2 group">
+          Get Started
+          <ArrowRight class="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+        </a>
+        <a href="/official/" class="btn btn-outline btn-lg gap-2">
+          <Download class="h-5 w-5" />
+          Get the Game
+        </a>
+      </div>
+      
+      <div class="mt-8 flex flex-wrap gap-4 justify-center text-sm opacity-60">
+        {game.platforms.map((platform, index) => (
+          <>
+            <span>{platform}</span>
+            {index < game.platforms.length - 1 && <span>•</span>}
+          </>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+  
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+  
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+</style>
+
