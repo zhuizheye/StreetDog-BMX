@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://streetdogbmx.wiki/sitemap.xml
+Sitemap: https://streetdogbmx.wiki/sitemap-index.xml
 
